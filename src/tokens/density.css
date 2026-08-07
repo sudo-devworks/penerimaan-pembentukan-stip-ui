@@ -1,0 +1,81 @@
+[data-density="comfortable"],
+:root {
+  --density-control-height-sm: 40px;
+  --density-control-height-md: 44px;
+  --density-control-height-lg: 48px;
+
+  --density-control-padding-inline-sm: var(--primitive-space-3);
+
+  --density-control-padding-inline-md: var(--primitive-space-4);
+
+  --density-control-padding-inline-lg: var(--primitive-space-5);
+
+  --density-card-padding-sm: var(--primitive-space-4);
+
+  --density-card-padding-md: var(--primitive-space-5);
+
+  --density-card-padding-lg: var(--primitive-space-6);
+
+  --density-table-row-height: 56px;
+  --density-list-row-min-height: 52px;
+
+  --density-section-gap-sm: var(--primitive-space-6);
+
+  --density-section-gap-md: var(--primitive-space-8);
+
+  --density-section-gap-lg: var(--primitive-space-12);
+}
+
+[data-density="default"] {
+  --density-control-height-sm: 36px;
+  --density-control-height-md: 40px;
+  --density-control-height-lg: 44px;
+
+  --density-control-padding-inline-sm: var(--primitive-space-2-5);
+
+  --density-control-padding-inline-md: var(--primitive-space-3);
+
+  --density-control-padding-inline-lg: var(--primitive-space-4);
+
+  --density-card-padding-sm: var(--primitive-space-4);
+
+  --density-card-padding-md: var(--primitive-space-5);
+
+  --density-card-padding-lg: var(--primitive-space-6);
+
+  --density-table-row-height: 48px;
+  --density-list-row-min-height: 44px;
+
+  --density-section-gap-sm: var(--primitive-space-5);
+
+  --density-section-gap-md: var(--primitive-space-6);
+
+  --density-section-gap-lg: var(--primitive-space-8);
+}
+
+[data-density="compact"] {
+  --density-control-height-sm: 32px;
+  --density-control-height-md: 36px;
+  --density-control-height-lg: 40px;
+
+  --density-control-padding-inline-sm: var(--primitive-space-2);
+
+  --density-control-padding-inline-md: var(--primitive-space-3);
+
+  --density-control-padding-inline-lg: var(--primitive-space-3);
+
+  --density-card-padding-sm: var(--primitive-space-3);
+
+  --density-card-padding-md: var(--primitive-space-4);
+
+  --density-card-padding-lg: var(--primitive-space-5);
+
+  --density-table-row-height: 40px;
+  --density-list-row-min-height: 36px;
+
+  --density-section-gap-sm: var(--primitive-space-4);
+
+  --density-section-gap-md: var(--primitive-space-5);
+
+  --density-section-gap-lg: var(--primitive-space-6);
+}

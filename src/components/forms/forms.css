@@ -1,0 +1,216 @@
+:root {
+  /*
+   * Form component tokens
+   *
+   * Token ini menjadi penghubung antara semantic token
+   * dan implementasi form component.
+   */
+
+  --form-field-gap: var(--spacing-2);
+  --form-field-supporting-gap: var(--spacing-1);
+  --form-field-group-gap: var(--spacing-6, 1.5rem);
+
+  --form-label-gap: var(--spacing-1);
+  --form-label-font-family: var(--font-family-sans);
+  --form-label-font-size: var(--font-size-sm);
+  --form-label-font-weight: var(--font-weight-medium);
+  --form-label-line-height: var(--line-height-sm);
+  --form-label-color: var(--color-text-primary);
+
+  --form-required-color: var(--color-text-danger);
+  --form-optional-color: var(--color-text-secondary);
+  --form-optional-font-weight: var(--font-weight-regular);
+
+  --form-message-font-family: var(--font-family-sans);
+  --form-message-font-size: var(--font-size-sm);
+  --form-message-line-height: var(--line-height-sm);
+
+  --form-helper-color: var(--color-text-secondary);
+  --form-requirement-color: var(--color-text-secondary);
+  --form-error-color: var(--color-text-danger);
+
+  --form-character-count-color: var(--color-text-secondary);
+  --form-disabled-opacity: var(--opacity-disabled);
+
+  --form-control-font-family: var(--font-family-sans, Inter, sans-serif);
+  --form-control-font-size-sm: var(--font-size-sm, 0.875rem);
+  --form-control-font-size-md: var(--font-size-md, 1rem);
+  --form-control-font-size-lg: var(--font-size-md, 1rem);
+  --form-control-font-weight: var(--font-weight-regular, 400);
+  --form-control-line-height: var(--line-height-md, 1.5);
+
+  --form-textarea-min-height: var(--size-28, 7rem);
+  --form-textarea-max-height: var(--size-80, 20rem);
+
+  --form-control-height-sm: var(--size-11, 2.75rem);
+  --form-control-height-md: var(--size-12, 3rem);
+  --form-control-height-lg: var(--size-14, 3.5rem);
+
+  --form-control-padding-inline-sm: var(--spacing-3, 0.75rem);
+  --form-control-padding-inline-md: var(--spacing-3, 0.75rem);
+  --form-control-padding-inline-lg: var(--spacing-4, 1rem);
+
+  --form-control-padding-block: var(--spacing-2, 0.5rem);
+  --form-control-content-gap: var(--spacing-2, 0.5rem);
+
+  --form-control-background: var(--color-background-primary, #ffffff);
+  --form-control-background-hover: var(--color-background-primary, #ffffff);
+  --form-control-background-disabled: var(--color-background-disabled, #f1f5f9);
+  --form-control-background-readonly: var(
+    --color-background-secondary,
+    #f8fafc
+  );
+
+  --form-control-text: var(--color-text-primary, #0f172a);
+  --form-control-placeholder: var(--color-text-tertiary, #64748b);
+  --form-control-icon: var(--color-icon-secondary, #64748b);
+
+  --form-control-border-width: var(--border-width-1, 1px);
+  --form-control-border-color: var(--color-border-default, #94a3b8);
+  --form-control-border-hover: var(--color-border-strong, #475569);
+  --form-control-border-invalid: var(--color-border-danger, #dc2626);
+  --form-control-border-disabled: var(--color-border-disabled, #cbd5e1);
+
+  --form-control-radius: var(--radius-md, 0.5rem);
+
+  --form-control-focus-width: var(--border-width-2, 2px);
+  --form-control-focus-offset: var(--spacing-0-5, 2px);
+  --form-control-focus-color: var(--color-focus-ring, #0891b2);
+  --form-control-focus-invalid-color: var(--color-focus-ring-danger, #dc2626);
+
+  --form-control-disabled-opacity: var(--opacity-disabled);
+
+  --form-control-action-size: var(--size-11);
+  --form-control-action-icon-size: var(--size-5);
+  --form-control-action-radius: var(--radius-md);
+  --form-control-action-color: var(--color-icon-secondary);
+  --form-control-action-hover-color: var(--color-icon-primary);
+  --form-control-action-hover-background: var(--color-background-hover);
+  --form-control-action-active-background: var(--color-background-pressed);
+
+  --form-search-loading-icon-size: var(--size-5);
+  --form-search-loading-duration: 800ms;
+
+  --form-selection-size: 1.25rem;
+  --form-selection-touch-size: 2.75rem;
+
+  --form-selection-border-width: 1px;
+  --form-selection-border-color: var(--color-border-default, #94a3b8);
+  --form-selection-border-hover: var(--color-border-strong, #475569);
+  --form-selection-border-checked: var(
+    --color-action-primary-background,
+    #0f3b66
+  );
+
+  --form-selection-background: var(--color-background-primary, #ffffff);
+  --form-selection-background-checked: var(
+    --color-action-primary-background,
+    #0f3b66
+  );
+  --form-selection-icon-color: var(--color-text-on-brand, #ffffff);
+
+  --form-selection-focus-color: var(--color-focus-ring, #0891b2);
+  --form-selection-invalid-color: var(--color-border-danger, #dc2626);
+  --form-selection-disabled-opacity: var(--opacity-disabled, 0.5);
+
+  --form-selection-label-color: var(--color-text-primary, #0f172a);
+  --form-selection-label-font-size: var(--font-size-sm, 0.875rem);
+  --form-selection-label-line-height: 1.25rem;
+  --form-selection-description-color: var(--color-text-secondary, #475569);
+
+  --form-selection-item-gap: var(--spacing-3, 0.75rem);
+  --form-selection-content-gap: var(--spacing-1, 0.25rem);
+  --form-selection-group-gap: var(--spacing-3, 0.75rem);
+  --form-selection-horizontal-gap: var(--spacing-5, 1.25rem);
+
+  --form-checkbox-radius: var(--radius-sm, 0.25rem);
+  --form-radio-radius: 9999px;
+
+  --form-select-chevron-size: 1.25rem;
+
+  /* File input */
+
+  --form-file-border-color: var(--color-border-default);
+  --form-file-border-hover: var(--color-border-strong);
+  --form-file-border-invalid: var(--color-border-danger);
+  --form-file-background: var(--color-background-primary);
+  --form-file-background-hover: var(--color-background-secondary);
+  --form-file-icon-color: var(--color-icon-secondary);
+  --form-file-name-color: var(--color-text-primary);
+  --form-file-empty-color: var(--color-text-secondary);
+  --form-file-radius: var(--radius-md);
+  --form-file-padding: var(--spacing-4);
+  --form-file-gap: var(--spacing-3);
+
+  /* Field group */
+
+  --form-field-group-column-gap: var(--spacing-4, 1rem);
+  --form-field-group-row-gap: var(--form-field-group-gap);
+  --form-field-group-row-gap: var(--spacing-5, 1.25rem);
+
+  /* Form section */
+
+  --form-section-gap: var(--spacing-5);
+  --form-section-header-gap: var(--spacing-2);
+  --form-section-content-gap: var(--spacing-5, 1.25rem);
+  --form-section-title-color: var(--color-text-primary);
+  --form-section-description-color: var(--color-text-secondary);
+  --form-section-divider-color: var(--color-border-subtle);
+
+  /* Form actions */
+
+  --form-actions-gap: var(--spacing-4, 1rem);
+  --form-actions-padding-block-start: var(--spacing-7, 1.75rem);
+  --form-actions-divider-color: var(--color-border-subtle);
+}
+
+[data-density="comfortable"] {
+  --form-field-gap: var(--spacing-3, 0.75rem);
+  --form-field-supporting-gap: var(--spacing-2, 0.5rem);
+
+  --form-field-group-gap: var(--spacing-5, 1.25rem);
+  --form-field-group-column-gap: var(--spacing-5, 1.25rem);
+  --form-field-group-row-gap: var(--spacing-5, 1.25rem);
+
+  --form-section-gap: var(--spacing-6, 1.5rem);
+  --form-section-content-gap: var(--spacing-5, 1.25rem);
+
+  --form-selection-group-gap: var(--spacing-3, 0.75rem);
+
+  --form-actions-gap: var(--spacing-3, 0.75rem);
+  --form-actions-padding-block-start: var(--spacing-6, 1.5rem);
+}
+
+[data-density="default"] {
+  --form-field-gap: var(--spacing-2, 0.5rem);
+  --form-field-supporting-gap: var(--spacing-1, 0.25rem);
+
+  --form-field-group-gap: var(--spacing-5, 1.25rem);
+  --form-field-group-column-gap: var(--spacing-4, 1rem);
+  --form-field-group-row-gap: var(--spacing-5, 1.25rem);
+
+  --form-section-gap: var(--spacing-5, 1.25rem);
+  --form-section-content-gap: var(--spacing-5, 1.25rem);
+
+  --form-selection-group-gap: var(--spacing-3, 0.75rem);
+
+  --form-actions-gap: var(--spacing-3, 0.75rem);
+  --form-actions-padding-block-start: var(--spacing-5, 1.25rem);
+}
+
+[data-density="compact"] {
+  --form-field-gap: var(--spacing-1, 0.25rem);
+  --form-field-supporting-gap: var(--spacing-1, 0.25rem);
+
+  --form-field-group-gap: var(--spacing-4, 1rem);
+  --form-field-group-column-gap: var(--spacing-3, 0.75rem);
+  --form-field-group-row-gap: var(--spacing-4, 1rem);
+
+  --form-section-gap: var(--spacing-4, 1rem);
+  --form-section-content-gap: var(--spacing-4, 1rem);
+
+  --form-selection-group-gap: var(--spacing-2, 0.5rem);
+
+  --form-actions-gap: var(--spacing-2, 0.5rem);
+  --form-actions-padding-block-start: var(--spacing-4, 1rem);
+}

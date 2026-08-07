@@ -1,0 +1,234 @@
+.public-program-detail__hero {
+  padding-block: var(--space-section-lg);
+  color: var(--color-text-on-strong);
+  background: var(--color-surface-brand-strong);
+}
+
+.public-program-detail__hero-inner {
+  display: grid;
+  gap: var(--space-section-md);
+}
+
+.public-program-detail__hero .stip-action-link {
+  color: var(--color-text-on-strong);
+}
+
+.public-program-detail__hero-content {
+  display: grid;
+  gap: var(--space-stack-xl);
+}
+
+.public-program-detail__hero-content > span {
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--primitive-radius-xl);
+  color: var(--color-text-brand);
+  background: var(--color-surface-default);
+}
+
+.public-program-detail__hero-content > span svg {
+  width: var(--size-icon-xl);
+  height: var(--size-icon-xl);
+}
+
+.public-program-detail__hero-content > div {
+  display: grid;
+  gap: var(--space-stack-lg);
+}
+
+.public-program-detail__hero-content p,
+.public-program-detail__hero-content h1,
+.public-program-detail__hero-content div > span {
+  margin: 0;
+}
+
+.public-program-detail__hero-content p {
+  color: var(--color-information-on-strong);
+  font-size: var(--text-label-medium-font-size);
+  line-height: var(--text-label-medium-line-height);
+  font-weight: var(--text-label-font-weight);
+  text-transform: uppercase;
+}
+
+.public-program-detail__hero-content h1 {
+  max-width: 18ch;
+  font-size: var(--text-heading-page-font-size);
+  line-height: var(--text-heading-page-line-height);
+  font-weight: var(--text-heading-page-font-weight);
+}
+
+.public-program-detail__hero-content div > span {
+  max-width: var(--size-container-reading);
+  color: var(--color-text-on-strong);
+  font-size: var(--text-body-large-font-size);
+  line-height: var(--text-body-large-line-height);
+}
+
+.public-program-detail__section {
+  padding-block: var(--composition-section-gap);
+}
+
+.public-program-detail__content-grid {
+  display: grid;
+  gap: var(--space-section-md);
+}
+
+.public-program-detail__content-grid > div,
+.public-program-detail__career .public-shell-container {
+  display: grid;
+  gap: var(--space-stack-md);
+}
+
+.public-program-detail__section p,
+.public-program-detail__section h2,
+.public-program-detail__section span {
+  margin: 0;
+}
+
+.public-program-detail__section p {
+  color: var(--color-text-link);
+  font-size: var(--text-label-small-font-size);
+  line-height: var(--text-label-small-line-height);
+  font-weight: var(--text-label-font-weight);
+  text-transform: uppercase;
+}
+
+.public-program-detail__section h2 {
+  max-width: 20ch;
+  color: var(--color-text-brand);
+  font-size: var(--text-heading-section-font-size);
+  line-height: var(--text-heading-section-line-height);
+  font-weight: var(--text-heading-section-font-weight);
+}
+
+.public-program-detail__content-grid ul {
+  display: grid;
+  gap: var(--space-stack-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.public-program-detail__content-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-inline-md);
+  padding: var(--space-stack-md);
+  border-radius: var(--primitive-radius-lg);
+  background: var(--color-surface-subtle);
+}
+
+.public-program-detail__content-grid li svg {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+  flex: 0 0 auto;
+  color: var(--color-success-text);
+}
+
+.public-program-detail__career {
+  background: var(--color-surface-subtle);
+}
+
+.public-program-detail__career span {
+  max-width: var(--size-container-reading);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-large-font-size);
+  line-height: var(--text-body-large-line-height);
+}
+
+.public-program-detail__section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-stack-lg);
+}
+
+.public-program-detail__section-heading > div {
+  display: grid;
+  gap: var(--space-stack-md);
+}
+
+.public-program-detail__activities {
+  display: grid;
+  gap: var(--space-stack-lg);
+  margin-top: var(--space-section-md);
+}
+
+.public-program-detail__activities article {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-stack-md);
+  padding: var(--composition-card-padding);
+  border: var(--primitive-border-width-default)
+    var(--primitive-border-style-solid) var(--color-border-default);
+  border-radius: var(--primitive-radius-xl);
+  background: var(--color-surface-default);
+}
+
+.public-program-detail__activities article > span {
+  padding: var(--space-stack-xs) var(--space-inline-sm);
+  border-radius: var(--primitive-radius-full);
+  color: var(--color-information-text);
+  background: var(--color-information-surface);
+  font-size: var(--text-label-small-font-size);
+  line-height: var(--text-label-small-line-height);
+  font-weight: var(--text-label-font-weight);
+}
+
+.public-program-detail__activities article > span[data-status="open"] {
+  color: var(--color-success-text);
+  background: var(--color-success-surface);
+}
+
+.public-program-detail__activities h3 {
+  margin: 0;
+  color: var(--color-text-brand);
+  font-size: var(--text-title-large-font-size);
+  line-height: var(--text-title-large-line-height);
+  font-weight: var(--text-title-large-font-weight);
+}
+
+.public-program-detail__activities article > p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+  text-transform: none;
+}
+
+@media (min-width: 768px) {
+  .public-program-detail__content-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .public-program-detail__activities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .public-program-detail__hero {
+    padding-block: var(--space-section-xl);
+  }
+
+  .public-program-detail__hero-content {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.public-program-detail__hero-content > *,
+.public-program-detail__content-grid > *,
+.public-program-detail__activities > * {
+  min-width: 0;
+}
+
+.public-program-detail h1,
+.public-program-detail h2,
+.public-program-detail h3,
+.public-program-detail p,
+.public-program-detail span {
+  overflow-wrap: anywhere;
+}

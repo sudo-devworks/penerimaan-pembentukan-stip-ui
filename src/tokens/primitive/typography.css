@@ -1,0 +1,54 @@
+:root {
+  /* Font Families */
+  --primitive-font-family-sans:
+    "Inter Variable", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --primitive-font-family-mono:
+    "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  /* Font Weights */
+  --primitive-font-weight-regular: 400;
+  --primitive-font-weight-medium: 500;
+  --primitive-font-weight-semibold: 600;
+  --primitive-font-weight-bold: 700;
+
+  /* Font Sizes */
+  --primitive-font-size-12: 0.75rem;
+  --primitive-font-size-14: 0.875rem;
+  --primitive-font-size-16: 1rem;
+  --primitive-font-size-18: 1.125rem;
+  --primitive-font-size-20: 1.25rem;
+  --primitive-font-size-22: 1.375rem;
+  --primitive-font-size-24: 1.5rem;
+  --primitive-font-size-28: 1.75rem;
+  --primitive-font-size-30: 1.875rem;
+  --primitive-font-size-32: 2rem;
+  --primitive-font-size-36: 2.25rem;
+  --primitive-font-size-40: 2.5rem;
+  --primitive-font-size-48: 3rem;
+
+  /* Line Heights */
+  --primitive-line-height-16: 1rem;
+  --primitive-line-height-18: 1.125rem;
+  --primitive-line-height-20: 1.25rem;
+  --primitive-line-height-22: 1.375rem;
+  --primitive-line-height-24: 1.5rem;
+  --primitive-line-height-26: 1.625rem;
+  --primitive-line-height-28: 1.75rem;
+  --primitive-line-height-30: 1.875rem;
+  --primitive-line-height-32: 2rem;
+  --primitive-line-height-36: 2.25rem;
+  --primitive-line-height-38: 2.375rem;
+  --primitive-line-height-40: 2.5rem;
+  --primitive-line-height-44: 2.75rem;
+  --primitive-line-height-48: 3rem;
+  --primitive-line-height-56: 3.5rem;
+
+  /* Letter Spacing */
+  --primitive-letter-spacing-tightest: -0.02em;
+  --primitive-letter-spacing-tighter: -0.015em;
+  --primitive-letter-spacing-tight: -0.01em;
+  --primitive-letter-spacing-subtle: -0.005em;
+  --primitive-letter-spacing-normal: 0;
+}

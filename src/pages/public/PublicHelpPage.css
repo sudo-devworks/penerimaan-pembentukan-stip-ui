@@ -1,0 +1,132 @@
+.public-help-page__content {
+  padding-block: var(--composition-section-gap);
+}
+
+.public-help-page__grid {
+  display: grid;
+  gap: var(--space-stack-lg);
+  margin-top: var(--space-section-md);
+}
+
+.public-help-page__grid article {
+  display: grid;
+  align-content: start;
+  gap: var(--space-stack-md);
+  padding: var(--composition-card-padding);
+  border: var(--primitive-border-width-default)
+    var(--primitive-border-style-solid) var(--color-border-default);
+  border-radius: var(--primitive-radius-xl);
+  background: var(--color-surface-default);
+}
+
+.public-help-page__grid svg {
+  width: var(--size-icon-xl);
+  height: var(--size-icon-xl);
+  color: var(--color-text-brand);
+}
+
+.public-help-page__grid h3,
+.public-help-page__grid p {
+  margin: 0;
+}
+
+.public-help-page__grid h3 {
+  color: var(--color-text-brand);
+  font-size: var(--text-title-large-font-size);
+  line-height: var(--text-title-large-line-height);
+  font-weight: var(--text-title-large-font-weight);
+}
+
+.public-help-page__grid p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+}
+
+.public-help-page__preparation {
+  padding-block: var(--composition-section-gap);
+  background: var(--color-surface-subtle);
+}
+
+.public-help-page__preparation-grid {
+  display: grid;
+  gap: var(--space-stack-xl);
+}
+
+.public-help-page__preparation-grid > svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--color-text-brand);
+}
+
+.public-help-page__preparation h2 {
+  margin: 0;
+  color: var(--color-text-brand);
+  font-size: var(--text-heading-section-font-size);
+  line-height: var(--text-heading-section-line-height);
+  font-weight: var(--text-heading-section-font-weight);
+}
+
+.public-help-page__preparation ul {
+  display: grid;
+  gap: var(--space-stack-md);
+  margin: var(--space-stack-lg) 0 0;
+  padding-left: var(--space-inline-lg);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+}
+
+.public-help-page__security {
+  padding-block: var(--space-section-lg);
+  background: var(--color-warning-surface);
+}
+
+.public-help-page__security-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-inline-md);
+}
+
+.public-help-page__security-inner > svg {
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
+  flex: 0 0 auto;
+  color: var(--color-warning-text);
+}
+
+.public-help-page__security h2,
+.public-help-page__security p {
+  margin: 0;
+}
+
+.public-help-page__security h2 {
+  color: var(--color-warning-text);
+  font-size: var(--text-title-large-font-size);
+  line-height: var(--text-title-large-line-height);
+  font-weight: var(--text-title-large-font-weight);
+}
+
+.public-help-page__security p {
+  margin-top: var(--space-stack-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+}
+
+@media (min-width: 640px) {
+  .public-help-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .public-help-page__preparation-grid {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .public-help-page__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

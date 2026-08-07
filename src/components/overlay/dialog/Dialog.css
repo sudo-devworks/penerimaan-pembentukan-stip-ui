@@ -1,0 +1,102 @@
+@import "../shared/overlay.tokens.css";
+
+.stip-dialog {
+  position: relative;
+  display: flex;
+  width: min(100%, var(--dialog-max-width));
+  max-height: min(90dvh, 56rem);
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-width-thin) solid var(--overlay-surface-border);
+  border-radius: var(--overlay-surface-radius);
+  background: var(--overlay-surface-background);
+  box-shadow: var(--overlay-surface-shadow);
+  color: var(--color-text-primary);
+}
+
+.stip-dialog[data-size="sm"] {
+  --dialog-max-width: 28rem;
+}
+
+.stip-dialog[data-size="md"] {
+  --dialog-max-width: 36rem;
+}
+
+.stip-dialog[data-size="lg"] {
+  --dialog-max-width: 48rem;
+}
+
+.stip-dialog[data-size="xl"] {
+  --dialog-max-width: 64rem;
+}
+
+.stip-dialog__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-6) var(--space-4);
+}
+
+.stip-dialog__title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font: var(--font-heading-sm);
+}
+
+.stip-dialog__description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font: var(--font-body-md);
+}
+
+.stip-dialog__body {
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-6);
+  color: var(--color-text-primary);
+}
+
+.stip-dialog__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+@media (max-width: 40rem) {
+  .stip-dialog {
+    max-height: calc(100dvh - (var(--space-4) * 2));
+  }
+
+  .stip-dialog__header {
+    padding: var(--space-5) var(--space-5) var(--space-3);
+  }
+
+  .stip-dialog__body {
+    padding: var(--space-3) var(--space-5);
+  }
+
+  .stip-dialog__footer {
+    padding: var(--space-3) var(--space-5) var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stip-dialog {
+    animation: stip-dialog-enter var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+}
+
+@keyframes stip-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2)) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

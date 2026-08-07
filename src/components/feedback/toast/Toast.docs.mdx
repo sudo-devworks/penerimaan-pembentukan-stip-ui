@@ -1,0 +1,46 @@
+﻿import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as ToastStories from "./Toast.stories";
+
+<Meta of={ToastStories} />
+
+<Title />
+
+`Toast` menampilkan feedback transient setelah tindakan user.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Penggunaan
+
+Gunakan untuk:
+
+- data berhasil disimpan;
+- perubahan berhasil diterapkan;
+- tindakan sederhana gagal;
+- feedback singkat setelah user melakukan action.
+
+Jangan gunakan Toast untuk:
+
+- informasi kritis yang wajib dibaca;
+- validation error form;
+- instruksi panjang;
+- blocking error;
+- hasil proses besar yang membutuhkan next step.
+
+## Duration
+
+Default:
+
+```text
+5000 ms
+```

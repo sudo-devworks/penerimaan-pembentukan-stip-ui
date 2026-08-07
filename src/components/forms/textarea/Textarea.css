@@ -1,0 +1,56 @@
+.textarea-frame {
+  align-items: flex-start;
+  min-height: var(--form-textarea-min-height);
+  max-height: var(--form-textarea-max-height);
+  padding-block: var(--form-control-padding-block);
+}
+
+.textarea-frame .form-control-frame__leading-icon,
+.textarea-frame .form-control-frame__trailing-action {
+  margin-block-start: var(--spacing-1);
+}
+
+.textarea {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: calc(
+    var(--form-textarea-min-height) - (var(--form-control-padding-block) * 2) -
+      (var(--form-control-border-width) * 2)
+  );
+  max-height: calc(
+    var(--form-textarea-max-height) - (var(--form-control-padding-block) * 2)
+  );
+  padding: 0;
+  color: inherit;
+  font-family: var(--form-control-font-family);
+  font-size: var(--form-control-font-size-md);
+  font-weight: var(--form-control-font-weight);
+  line-height: var(--form-control-line-height);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  resize: vertical;
+}
+
+.textarea::placeholder {
+  color: var(--form-control-placeholder);
+  opacity: 1;
+}
+
+.textarea:disabled {
+  cursor: not-allowed;
+  resize: none;
+}
+
+.textarea:read-only {
+  cursor: text;
+}
+
+.form-control-frame[data-size="sm"] .textarea {
+  font-size: var(--form-control-font-size-sm);
+}
+
+.form-control-frame[data-size="lg"] .textarea {
+  font-size: var(--form-control-font-size-lg);
+}

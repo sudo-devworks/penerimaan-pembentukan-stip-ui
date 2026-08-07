@@ -1,0 +1,50 @@
+:root {
+  /* Trigger */
+  --dropdown-action-trigger-gap: var(--space-inline-xs);
+  --dropdown-action-trigger-icon-size: var(--size-icon-sm);
+
+  /* Menu */
+  --dropdown-action-menu-min-width: 12rem;
+  --dropdown-action-menu-max-width: 20rem;
+  --dropdown-action-menu-padding: var(--space-inset-xs);
+  --dropdown-action-menu-offset: var(--space-stack-xs);
+
+  --dropdown-action-menu-background: var(--color-surface-subtle);
+  --dropdown-action-menu-border: var(--color-border-default);
+  --dropdown-action-menu-radius: var(--primitive-radius-lg);
+
+  /* Item */
+  --dropdown-action-item-min-height: var(--a11y-touch-target-min);
+  --dropdown-action-item-padding-inline: var(--space-inline-sm);
+  --dropdown-action-item-gap: var(--space-inline-sm);
+  --dropdown-action-item-radius: var(--primitive-radius-md);
+
+  --dropdown-action-item-foreground: var(--color-text-primary);
+  --dropdown-action-item-supporting: var(--color-text-secondary);
+  --dropdown-action-item-background-hover: var(--color-surface-accent-subtle);
+  --dropdown-action-item-background-active: var(
+    --color-surface-accent-selected
+  );
+
+  --dropdown-action-item-destructive-foreground: var(--color-danger-text);
+
+  --dropdown-action-item-disabled-foreground: var(--color-disabled-foreground);
+
+  --dropdown-action-item-icon-size: var(--size-icon-sm);
+
+  /* Separator */
+  --dropdown-action-separator-color: var(--color-border-default);
+  --dropdown-action-separator-space: var(--space-stack-xs);
+
+  /* Focus */
+  --dropdown-action-focus-ring-width: var(--a11y-focus-ring-width);
+  --dropdown-action-focus-ring-offset: var(--a11y-focus-ring-offset);
+  --dropdown-action-focus-ring-color: var(--color-focus-ring);
+
+  /* Motion */
+  --dropdown-action-motion-duration: var(--primitive-motion-duration-default);
+  --dropdown-action-motion-easing: var(--primitive-motion-easing-standard);
+
+  /* Layer */
+  --dropdown-action-z-index: var(--z-index-dropdown);
+}

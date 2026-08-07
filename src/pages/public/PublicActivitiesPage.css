@@ -1,0 +1,160 @@
+.public-catalog-hero {
+  color: var(--color-text-on-strong);
+  background: var(--color-surface-brand-strong);
+}
+
+.public-catalog-hero__inner {
+  display: grid;
+  gap: var(--space-stack-lg);
+  padding-block: var(--space-section-xl);
+}
+
+.public-catalog-hero__inner > p {
+  margin: 0;
+  color: var(--color-information-on-strong);
+  font-size: var(--text-label-medium-font-size);
+  line-height: var(--text-label-medium-line-height);
+  font-weight: var(--text-label-font-weight);
+  text-transform: uppercase;
+}
+
+.public-catalog-hero h1 {
+  max-width: 19ch;
+  margin: 0;
+  color: inherit;
+  font-size: var(--text-heading-page-font-size);
+  line-height: var(--text-heading-page-line-height);
+  font-weight: var(--text-heading-page-font-weight);
+}
+
+.public-catalog-hero__inner > span {
+  max-width: var(--size-container-reading);
+  color: var(--color-text-on-strong);
+  font-size: var(--text-body-large-font-size);
+  line-height: var(--text-body-large-line-height);
+}
+
+.public-activities-page__content {
+  padding-block: var(--composition-section-gap);
+}
+
+.public-activities-page__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-stack-lg);
+}
+
+.public-activities-page__heading > div {
+  display: grid;
+  gap: var(--space-stack-sm);
+}
+
+.public-activities-page__heading p {
+  margin: 0;
+  color: var(--color-text-link);
+  font-size: var(--text-label-small-font-size);
+  line-height: var(--text-label-small-line-height);
+  font-weight: var(--text-label-font-weight);
+  text-transform: uppercase;
+}
+
+.public-activities-page__heading h2 {
+  margin: 0;
+  color: var(--color-text-brand);
+  font-size: var(--text-heading-section-font-size);
+  line-height: var(--text-heading-section-line-height);
+  font-weight: var(--text-heading-section-font-weight);
+}
+
+.public-activities-page__heading > span {
+  color: var(--color-text-supporting);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+}
+
+.public-activities-page__grid {
+  display: grid;
+  gap: var(--space-stack-lg);
+  margin-top: var(--space-section-md);
+}
+
+.public-activities-page__empty {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-stack-md);
+  margin-top: var(--space-section-md);
+  padding: var(--space-section-md);
+  border-radius: var(--primitive-radius-xl);
+  background: var(--color-surface-subtle);
+}
+
+.public-activities-page__empty svg {
+  width: var(--size-icon-xl);
+  height: var(--size-icon-xl);
+  color: var(--color-text-brand);
+}
+
+.public-activities-page__empty h2,
+.public-activities-page__empty p {
+  margin: 0;
+}
+
+.public-catalog-cta {
+  padding-bottom: var(--composition-section-gap);
+}
+
+.public-catalog-cta__inner {
+  display: grid;
+  gap: var(--space-stack-xl);
+  padding-block: var(--space-section-lg);
+  border-radius: var(--primitive-radius-2xl);
+  color: var(--color-text-on-strong);
+  background: var(--color-surface-brand-strong);
+}
+
+.public-catalog-cta__inner > div {
+  display: grid;
+  gap: var(--space-stack-sm);
+}
+
+.public-catalog-cta p,
+.public-catalog-cta h2 {
+  margin: 0;
+}
+
+.public-catalog-cta p {
+  color: var(--color-information-on-strong);
+  font-size: var(--text-label-medium-font-size);
+  line-height: var(--text-label-medium-line-height);
+  font-weight: var(--text-label-font-weight);
+}
+
+.public-catalog-cta h2 {
+  font-size: var(--text-heading-section-font-size);
+  line-height: var(--text-heading-section-line-height);
+  font-weight: var(--text-heading-section-font-weight);
+}
+
+@media (min-width: 640px) {
+  .public-activities-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .public-catalog-cta__inner {
+    padding-inline: var(--space-section-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .public-catalog-hero__inner {
+    padding-block: var(--space-section-2xl);
+  }
+
+  .public-catalog-cta__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding-inline: var(--space-section-lg);
+  }
+}

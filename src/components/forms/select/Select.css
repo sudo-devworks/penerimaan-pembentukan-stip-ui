@@ -1,0 +1,52 @@
+.select-frame {
+  cursor: pointer;
+}
+
+.select-frame[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.select-control {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: calc(
+    var(--form-control-height-md) - (var(--form-control-border-width) * 2)
+  );
+  padding: 0;
+  color: inherit;
+  font-family: var(--form-control-font-family);
+  font-size: var(--form-control-font-size-md);
+  font-weight: var(--form-control-font-weight);
+  line-height: var(--form-control-line-height);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.select-control:disabled {
+  cursor: not-allowed;
+}
+
+.select-frame__chevron {
+  width: var(--form-select-chevron-size);
+  height: var(--form-select-chevron-size);
+  color: var(--form-control-icon);
+  pointer-events: none;
+}
+
+.form-control-frame[data-size="sm"] .select-control {
+  min-height: calc(
+    var(--form-control-height-sm) - (var(--form-control-border-width) * 2)
+  );
+  font-size: var(--form-control-font-size-sm);
+}
+
+.form-control-frame[data-size="lg"] .select-control {
+  min-height: calc(
+    var(--form-control-height-lg) - (var(--form-control-border-width) * 2)
+  );
+  font-size: var(--form-control-font-size-lg);
+}

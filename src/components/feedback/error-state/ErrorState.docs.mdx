@@ -1,0 +1,35 @@
+﻿import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as ErrorStateStories from "./ErrorState.stories";
+
+<Meta of={ErrorStateStories} />
+
+<Title />
+
+`ErrorState` digunakan ketika halaman, section, tabel, atau area konten gagal
+dimuat atau gagal diproses.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Perbedaan dari form error
+
+```text
+ErrorMessage
+â†’ validation error pada satu field
+
+ErrorSummary
+â†’ ringkasan beberapa validation error
+
+ErrorState
+â†’ kegagalan area, section, atau halaman
+```

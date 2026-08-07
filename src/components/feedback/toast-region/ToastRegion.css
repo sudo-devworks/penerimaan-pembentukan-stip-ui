@@ -1,0 +1,78 @@
+@import "../shared/feedback.tokens.css";
+
+.stip-toast-region {
+  position: fixed;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--toast-region-gap);
+
+  width: min(
+    var(--toast-max-width),
+    calc(100vw - (var(--toast-region-offset-inline) * 2))
+  );
+
+  max-height: calc(100vh - (var(--toast-region-offset-block) * 2));
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  pointer-events: none;
+}
+
+.stip-toast-region > * {
+  flex: 0 0 auto;
+  pointer-events: auto;
+}
+
+.stip-toast-region[data-placement="top-right"] {
+  inset-block-start: var(--toast-region-offset-block);
+  inset-inline-end: var(--toast-region-offset-inline);
+}
+
+.stip-toast-region[data-placement="top-center"] {
+  inset-block-start: var(--toast-region-offset-block);
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+}
+
+.stip-toast-region[data-placement="bottom-right"] {
+  inset-block-end: var(--toast-region-offset-block);
+  inset-inline-end: var(--toast-region-offset-inline);
+}
+
+.stip-toast-region[data-placement="bottom-center"] {
+  inset-block-end: var(--toast-region-offset-block);
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 479px) {
+  .stip-toast-region {
+    --toast-region-offset-block: var(--space-inline-md);
+    --toast-region-offset-inline: var(--space-inline-md);
+
+    width: calc(100vw - (var(--toast-region-offset-inline) * 2));
+  }
+
+  .stip-toast-region[data-placement="top-right"],
+  .stip-toast-region[data-placement="top-center"] {
+    inset-block-start: var(--toast-region-offset-block);
+    inset-inline: var(--toast-region-offset-inline);
+    transform: none;
+  }
+
+  .stip-toast-region[data-placement="bottom-right"],
+  .stip-toast-region[data-placement="bottom-center"] {
+    inset-block-end: var(--toast-region-offset-block);
+    inset-inline: var(--toast-region-offset-inline);
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stip-toast-region {
+    scroll-behavior: auto;
+  }
+}

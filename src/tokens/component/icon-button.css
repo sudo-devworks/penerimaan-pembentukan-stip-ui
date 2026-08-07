@@ -1,0 +1,88 @@
+:root {
+  /* Sizing */
+  --icon-button-size-sm: var(--density-control-height-sm);
+  --icon-button-size-md: var(--density-control-height-md);
+  --icon-button-size-lg: var(--density-control-height-lg);
+
+  --icon-button-touch-target-min: var(--a11y-touch-target-min);
+
+  --icon-button-icon-size-sm: var(--size-icon-sm);
+  --icon-button-icon-size-md: var(--size-icon-md);
+  --icon-button-icon-size-lg: var(--size-icon-lg);
+
+  /* Shape */
+  --icon-button-border-width: var(--primitive-border-width-default);
+  --icon-button-border-radius: var(--primitive-radius-md);
+  --icon-button-border-radius-circular: var(--primitive-radius-full);
+
+  /* Motion */
+  --icon-button-transition-duration: var(--primitive-motion-duration-default);
+  --icon-button-transition-easing: var(--primitive-motion-easing-standard);
+
+  /* Focus */
+  --icon-button-focus-ring-color: var(--color-focus-ring);
+  --icon-button-focus-ring-width: var(--a11y-focus-ring-width);
+  --icon-button-focus-ring-offset: var(--a11y-focus-ring-offset);
+
+  /* Primary */
+  --icon-button-primary-background: var(--button-primary-background);
+  --icon-button-primary-background-hover: var(
+    --button-primary-background-hover
+  );
+  --icon-button-primary-background-pressed: var(
+    --button-primary-background-pressed
+  );
+  --icon-button-primary-foreground: var(--button-primary-foreground);
+  --icon-button-primary-border: var(--button-primary-border);
+
+  /* Secondary */
+  --icon-button-secondary-background: var(--button-secondary-background);
+  --icon-button-secondary-background-hover: var(
+    --button-secondary-background-hover
+  );
+  --icon-button-secondary-background-pressed: var(
+    --button-secondary-background-pressed
+  );
+  --icon-button-secondary-foreground: var(--button-secondary-foreground);
+  --icon-button-secondary-border: var(--button-secondary-border);
+
+  /* Outline */
+  --icon-button-outline-background: var(--button-outline-background);
+  --icon-button-outline-background-hover: var(
+    --button-outline-background-hover
+  );
+  --icon-button-outline-background-pressed: var(
+    --button-outline-background-pressed
+  );
+  --icon-button-outline-foreground: var(--button-outline-foreground);
+  --icon-button-outline-border: var(--button-outline-border);
+
+  /* Ghost */
+  --icon-button-ghost-background: var(--button-ghost-background);
+  --icon-button-ghost-background-hover: var(--button-ghost-background-hover);
+  --icon-button-ghost-background-pressed: var(
+    --button-ghost-background-pressed
+  );
+  --icon-button-ghost-foreground: var(--button-ghost-foreground);
+  --icon-button-ghost-border: var(--button-ghost-border);
+
+  /* Destructive */
+  --icon-button-destructive-background: var(--button-destructive-background);
+  --icon-button-destructive-background-hover: var(
+    --button-destructive-background-hover
+  );
+  --icon-button-destructive-background-pressed: var(
+    --button-destructive-background-pressed
+  );
+  --icon-button-destructive-foreground: var(--button-destructive-foreground);
+  --icon-button-destructive-border: var(--button-destructive-border);
+
+  /* Disabled */
+  --icon-button-disabled-background: var(--button-disabled-background);
+  --icon-button-disabled-foreground: var(--button-disabled-foreground);
+  --icon-button-disabled-border: var(--button-disabled-border);
+
+  /* Interaction */
+  --icon-button-pressed-translate-y: var(--button-pressed-translate-y);
+  --icon-button-pressed-shadow: var(--button-pressed-shadow);
+}

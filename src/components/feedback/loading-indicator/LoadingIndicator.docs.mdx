@@ -1,0 +1,30 @@
+﻿import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as LoadingIndicatorStories from "./LoadingIndicator.stories";
+
+<Meta of={LoadingIndicatorStories} />
+
+<Title />
+
+`LoadingIndicator` adalah spinner untuk proses kecil atau area dengan durasi
+singkat.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Accessible mode
+
+Gunakan label ketika indicator menjadi satu-satunya feedback loading:
+
+```tsx
+<LoadingIndicator label="Memuat data peserta" />
+```

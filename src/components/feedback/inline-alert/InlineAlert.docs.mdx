@@ -1,0 +1,47 @@
+﻿import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as InlineAlertStories from "./InlineAlert.stories";
+
+<Meta of={InlineAlertStories} />
+
+<Title />
+
+`InlineAlert` menampilkan feedback ringkas yang ditempatkan dekat dengan card,
+form section, upload area, payment card, atau component tertentu.
+
+## Perbedaan dari Alert
+
+Gunakan `InlineAlert` untuk pesan kontekstual dan ringkas.
+
+Gunakan `Alert` untuk feedback level halaman atau section yang lebih dominan.
+
+`InlineAlert` bukan pengganti:
+
+- ErrorMessage;
+- HelperText;
+- RequirementMessage;
+- ErrorSummary.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Contoh penggunaan
+
+```tsx
+<InlineAlert
+  severity="warning"
+  title="Dokumen perlu diperbaiki"
+  action={<TextAction>Pilih ulang</TextAction>}
+>
+  Gunakan dokumen yang dapat dibaca dengan jelas.
+</InlineAlert>
+```

@@ -1,0 +1,40 @@
+import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as BreadcrumbStories from "./Breadcrumb.stories";
+
+<Meta of={BreadcrumbStories} />
+
+<Title />
+
+`Breadcrumb` menunjukkan posisi halaman saat ini di dalam hierarki informasi.
+
+Breadcrumb digunakan untuk membantu user memahami hubungan halaman saat ini
+dengan halaman induknya.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Semantics
+
+Struktur dasarnya:
+
+```html
+<nav aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a href="/">Beranda</a>
+    </li>
+
+    <li aria-current="page">Detail Peserta</li>
+  </ol>
+</nav>
+```

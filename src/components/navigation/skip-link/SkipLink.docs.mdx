@@ -1,0 +1,34 @@
+import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as SkipLinkStories from "./SkipLink.stories";
+
+<Meta of={SkipLinkStories} />
+
+<Title />
+
+`SkipLink` memungkinkan user keyboard melewati navigasi berulang dan langsung
+menuju konten utama.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Penggunaan
+
+```tsx
+<>
+  <SkipLink>Lewati ke konten utama</SkipLink>
+
+  <main id="main-content" tabIndex={-1}>
+    ...
+  </main>
+</>
+```

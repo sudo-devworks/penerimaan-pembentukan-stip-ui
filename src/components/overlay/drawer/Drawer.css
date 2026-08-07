@@ -1,0 +1,195 @@
+@import "../shared/overlay.tokens.css";
+
+.stip-drawer-backdrop {
+  place-items: stretch;
+  padding: 0;
+}
+
+.stip-drawer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-width-thin) solid var(--overlay-surface-border);
+  background: var(--overlay-surface-background);
+  box-shadow: var(--overlay-surface-shadow);
+  color: var(--color-text-primary);
+}
+
+.stip-drawer[data-placement="left"],
+.stip-drawer[data-placement="right"] {
+  top: 0;
+  bottom: 0;
+  width: min(100%, var(--drawer-inline-size));
+  max-width: 100%;
+}
+
+.stip-drawer[data-placement="left"] {
+  left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 var(--overlay-surface-radius) var(--overlay-surface-radius) 0;
+}
+
+.stip-drawer[data-placement="right"] {
+  right: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: var(--overlay-surface-radius) 0 0 var(--overlay-surface-radius);
+}
+
+.stip-drawer[data-placement="top"],
+.stip-drawer[data-placement="bottom"] {
+  right: 0;
+  left: 0;
+  height: min(100%, var(--drawer-block-size));
+  max-height: 100%;
+}
+
+.stip-drawer[data-placement="top"] {
+  top: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0 0 var(--overlay-surface-radius) var(--overlay-surface-radius);
+}
+
+.stip-drawer[data-placement="bottom"] {
+  bottom: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: var(--overlay-surface-radius) var(--overlay-surface-radius) 0 0;
+}
+
+.stip-drawer[data-size="sm"] {
+  --drawer-inline-size: 20rem;
+  --drawer-block-size: 16rem;
+}
+
+.stip-drawer[data-size="md"] {
+  --drawer-inline-size: 28rem;
+  --drawer-block-size: 24rem;
+}
+
+.stip-drawer[data-size="lg"] {
+  --drawer-inline-size: 40rem;
+  --drawer-block-size: 36rem;
+}
+
+.stip-drawer__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-6) var(--space-4);
+}
+
+.stip-drawer__title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font: var(--font-heading-sm);
+}
+
+.stip-drawer__description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font: var(--font-body-md);
+}
+
+.stip-drawer__body {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-6);
+}
+
+.stip-drawer__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+@media (max-width: 40rem) {
+  .stip-drawer[data-placement="left"],
+  .stip-drawer[data-placement="right"] {
+    width: min(calc(100% - var(--space-8)), var(--drawer-inline-size));
+  }
+
+  .stip-drawer__header {
+    padding: var(--space-5) var(--space-5) var(--space-3);
+  }
+
+  .stip-drawer__body {
+    padding: var(--space-3) var(--space-5);
+  }
+
+  .stip-drawer__footer {
+    padding: var(--space-3) var(--space-5) var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stip-drawer[data-placement="left"] {
+    animation: stip-drawer-enter-left var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+
+  .stip-drawer[data-placement="right"] {
+    animation: stip-drawer-enter-right var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+
+  .stip-drawer[data-placement="top"] {
+    animation: stip-drawer-enter-top var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+
+  .stip-drawer[data-placement="bottom"] {
+    animation: stip-drawer-enter-bottom var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+}
+
+@keyframes stip-drawer-enter-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes stip-drawer-enter-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes stip-drawer-enter-top {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes stip-drawer-enter-bottom {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

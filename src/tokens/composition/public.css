@@ -1,0 +1,29 @@
+[data-portal="public"] {
+  --composition-page-background: var(--color-surface-default);
+
+  --composition-content-max-width: var(--size-container-content);
+
+  --composition-reading-max-width: var(--size-container-reading);
+
+  --composition-page-gutter: var(--space-page-gutter-mobile);
+
+  --composition-section-gap: var(--space-section-lg);
+
+  --composition-card-padding: var(--density-card-padding-lg);
+}
+
+@media (min-width: 640px) {
+  [data-portal="public"] {
+    --composition-page-gutter: var(--space-page-gutter-tablet);
+
+    --composition-section-gap: var(--space-section-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-portal="public"] {
+    --composition-page-gutter: var(--space-page-gutter-desktop);
+
+    --composition-section-gap: var(--space-section-2xl);
+  }
+}

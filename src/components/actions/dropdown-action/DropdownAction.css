@@ -1,0 +1,159 @@
+.stip-dropdown-action {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+}
+
+.stip-dropdown-action--full-width {
+  display: flex;
+  width: 100%;
+}
+
+.stip-dropdown-action__menu {
+  position: absolute;
+  inset-block-start: calc(100% + var(--dropdown-action-menu-offset));
+  inset-inline-start: 0;
+  z-index: var(--dropdown-action-z-index);
+
+  display: grid;
+
+  min-width: var(--dropdown-action-menu-min-width);
+  max-width: min(
+    var(--dropdown-action-menu-max-width),
+    calc(100vw - var(--space-inline-lg))
+  );
+  padding: var(--dropdown-action-menu-padding);
+
+  overflow: hidden;
+
+  background-color: var(--dropdown-action-menu-background);
+
+  border: var(--primitive-border-width-default) solid
+    var(--dropdown-action-menu-border);
+  border-radius: var(--dropdown-action-menu-radius);
+}
+
+.stip-dropdown-action[data-placement="end"] .stip-dropdown-action__menu {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+.stip-dropdown-action__item {
+  display: flex;
+  align-items: center;
+  gap: var(--dropdown-action-item-gap);
+
+  width: 100%;
+  min-height: var(--dropdown-action-item-min-height);
+  padding-block: var(--space-stack-xs);
+  padding-inline: var(--dropdown-action-item-padding-inline);
+
+  font-family: var(--font-family-sans);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+  text-align: start;
+  text-decoration: none;
+
+  color: var(--dropdown-action-item-foreground);
+  background-color: transparent;
+
+  border: 0;
+  border-radius: var(--dropdown-action-item-radius);
+
+  cursor: pointer;
+
+  transition:
+    color var(--dropdown-action-motion-duration)
+      var(--dropdown-action-motion-easing),
+    background-color var(--dropdown-action-motion-duration)
+      var(--dropdown-action-motion-easing);
+}
+
+.stip-dropdown-action__item:hover:not(:disabled):not([aria-disabled="true"]),
+.stip-dropdown-action__item:focus-visible {
+  background-color: var(--dropdown-action-item-background-hover);
+}
+
+.stip-dropdown-action__item:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--dropdown-action-item-background-active);
+}
+
+.stip-dropdown-action__item:focus {
+  outline: none;
+}
+
+.stip-dropdown-action__item:focus-visible {
+  outline: var(--dropdown-action-focus-ring-width) solid
+    var(--dropdown-action-focus-ring-color);
+  outline-offset: calc(var(--dropdown-action-focus-ring-offset) * -1);
+}
+
+.stip-dropdown-action__item:disabled,
+.stip-dropdown-action__item[aria-disabled="true"] {
+  color: var(--dropdown-action-item-disabled-foreground);
+
+  cursor: not-allowed;
+}
+
+.stip-dropdown-action__item[data-destructive="true"] {
+  color: var(--dropdown-action-item-destructive-foreground);
+}
+
+.stip-dropdown-action__item-content {
+  display: grid;
+  flex: 1 1 auto;
+  gap: var(--space-stack-2xs);
+  min-width: 0;
+}
+
+.stip-dropdown-action__item-label,
+.stip-dropdown-action__item-description {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.stip-dropdown-action__item-label {
+  font-weight: var(--text-label-font-weight);
+}
+
+.stip-dropdown-action__item-description {
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+  color: var(--dropdown-action-item-supporting);
+}
+
+.stip-dropdown-action__item-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--dropdown-action-item-icon-size);
+  height: var(--dropdown-action-item-icon-size);
+}
+
+.stip-dropdown-action__item-icon > svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+.stip-dropdown-action__separator {
+  height: var(--primitive-border-width-default);
+  margin-block: var(--dropdown-action-separator-space);
+
+  background-color: var(--dropdown-action-separator-color);
+}
+
+@media (max-width: 639px) {
+  .stip-dropdown-action--full-width .stip-dropdown-action__menu {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stip-dropdown-action__item {
+    transition: none;
+  }
+}

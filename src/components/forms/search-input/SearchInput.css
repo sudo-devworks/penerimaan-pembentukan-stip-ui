@@ -1,0 +1,27 @@
+.search-input__loading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--form-control-action-size);
+  height: var(--form-control-action-size);
+  color: var(--form-control-action-color);
+}
+
+.search-input__loading svg {
+  width: var(--form-search-loading-icon-size);
+  height: var(--form-search-loading-icon-size);
+  animation: search-input-spin var(--form-search-loading-duration) linear
+    infinite;
+}
+
+@keyframes search-input-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-input__loading svg {
+    animation: none;
+  }
+}

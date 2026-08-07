@@ -1,0 +1,16 @@
+:focus-visible {
+  outline: var(--a11y-focus-ring-width) solid var(--color-focus-ring);
+
+  outline-offset: var(--a11y-focus-ring-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

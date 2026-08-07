@@ -1,0 +1,4 @@
+.form-error-message {
+  color: var(--form-error-color);
+  font-weight: var(--font-weight-medium);
+}

@@ -1,0 +1,30 @@
+@import "../shared/feedback.tokens.css";
+
+.stip-loading-message {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--loading-message-gap);
+
+  min-width: 0;
+}
+
+.stip-loading-message__content {
+  display: grid;
+  min-width: 0;
+  gap: var(--loading-message-text-gap);
+}
+
+.stip-loading-message__title {
+  color: var(--loading-message-title);
+  font-size: var(--text-label-medium-font-size);
+  font-weight: var(--text-label-font-weight);
+  line-height: var(--text-label-medium-line-height);
+  overflow-wrap: anywhere;
+}
+
+.stip-loading-message__description {
+  color: var(--loading-message-description);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+  overflow-wrap: anywhere;
+}

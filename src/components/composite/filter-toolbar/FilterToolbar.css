@@ -1,0 +1,125 @@
+.filter-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-md);
+  width: 100%;
+  min-width: 0;
+}
+
+.filter-toolbar__primary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-inline-lg);
+  min-width: 0;
+}
+
+.filter-toolbar__controls {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-stack-sm) var(--space-inline-sm);
+  min-width: 0;
+}
+
+.filter-toolbar__search {
+  flex: 1 1 18rem;
+  max-width: 28rem;
+  min-width: 14rem;
+}
+
+.filter-toolbar__search > * {
+  width: 100%;
+}
+
+.filter-toolbar__filters {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-stack-sm) var(--space-inline-sm);
+  min-width: 0;
+}
+
+.filter-toolbar__mobile-trigger {
+  display: none;
+}
+
+.filter-toolbar__actions {
+  display: flex;
+  flex: none;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.filter-toolbar__supporting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-stack-sm) var(--space-inline-lg);
+  min-width: 0;
+}
+
+.filter-toolbar__results {
+  flex: none;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+}
+
+.filter-toolbar__active-filters {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-stack-xs) var(--space-inline-xs);
+  min-width: 0;
+}
+
+@media (max-width: 47.9375rem) {
+  .filter-toolbar__primary {
+    flex-direction: column;
+    gap: var(--space-stack-md);
+  }
+
+  .filter-toolbar__controls {
+    width: 100%;
+  }
+
+  .filter-toolbar__search {
+    flex-basis: 100%;
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .filter-toolbar__filters {
+    display: none;
+  }
+
+  .filter-toolbar__mobile-trigger {
+    display: flex;
+    flex: 1;
+  }
+
+  .filter-toolbar__mobile-trigger > * {
+    width: 100%;
+  }
+
+  .filter-toolbar__actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .filter-toolbar__supporting {
+    flex-direction: column;
+  }
+
+  .filter-toolbar__active-filters {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

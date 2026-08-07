@@ -1,0 +1,45 @@
+@import "../shared/feedback.tokens.css";
+
+.stip-loading-indicator {
+  --loading-size: var(--loading-indicator-size-md);
+
+  display: inline-block;
+  flex: 0 0 auto;
+
+  width: var(--loading-size);
+  height: var(--loading-size);
+
+  border: var(--loading-indicator-border-width) solid
+    var(--loading-indicator-track);
+  border-block-start-color: var(--loading-indicator-foreground);
+  border-inline-end-color: var(--loading-indicator-foreground);
+  border-radius: 50%;
+
+  animation: stip-loading-indicator-spin 700ms linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.stip-loading-indicator[data-size="sm"] {
+  --loading-size: var(--loading-indicator-size-sm);
+}
+
+.stip-loading-indicator[data-size="lg"] {
+  --loading-size: var(--loading-indicator-size-lg);
+}
+
+@keyframes stip-loading-indicator-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stip-loading-indicator {
+    animation-duration: 1400ms;
+  }
+}

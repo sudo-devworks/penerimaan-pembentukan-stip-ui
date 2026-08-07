@@ -1,0 +1,44 @@
+.field-group {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--form-field-group-column-gap);
+  row-gap: var(--form-field-group-row-gap);
+  min-width: 0;
+  width: 100%;
+}
+
+.field-group[data-columns="2"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field-group[data-columns="3"] {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.field-group[data-columns="4"] {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.field-group[data-columns="auto"] {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+@media (max-width: 47.9375rem) {
+  .field-group,
+  .field-group[data-columns="2"],
+  .field-group[data-columns="3"],
+  .field-group[data-columns="4"],
+  .field-group[data-columns="auto"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .field-group[data-mobile-columns="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 24.375rem) {
+  .field-group[data-mobile-columns="2"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

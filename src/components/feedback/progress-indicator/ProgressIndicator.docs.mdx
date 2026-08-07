@@ -1,0 +1,34 @@
+﻿import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as ProgressStories from "./ProgressIndicator.stories";
+
+<Meta of={ProgressStories} />
+
+<Title />
+
+`ProgressIndicator` menampilkan perkembangan proses dalam mode determinate atau
+indeterminate.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Determinate
+
+Gunakan ketika nilai progress nyata tersedia:
+
+```tsx
+<ProgressIndicator
+  label="Mengunggah dokumen"
+  value={65}
+  valueText="65 persen"
+/>
+```

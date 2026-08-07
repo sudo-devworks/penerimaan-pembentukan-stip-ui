@@ -1,0 +1,168 @@
+.public-registration-flow-page__overview {
+  padding-block: var(--space-section-lg);
+  background: var(--color-surface-subtle);
+}
+
+.public-registration-flow-page__overview-grid {
+  display: grid;
+  gap: var(--space-stack-lg);
+}
+
+.public-registration-flow-page__overview-grid > svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--color-text-brand);
+}
+
+.public-registration-flow-page__overview-grid > div {
+  display: grid;
+  gap: var(--space-stack-sm);
+}
+
+.public-registration-flow-page__overview h2,
+.public-registration-flow-page__overview p {
+  margin: 0;
+}
+
+.public-registration-flow-page__overview h2 {
+  color: var(--color-text-brand);
+  font-size: var(--text-heading-component-font-size);
+  line-height: var(--text-heading-component-line-height);
+  font-weight: var(--text-heading-component-font-weight);
+}
+
+.public-registration-flow-page__overview p {
+  max-width: var(--size-container-reading);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+}
+
+.public-registration-flow-page__content {
+  padding-block: var(--composition-section-gap);
+}
+
+.public-registration-flow {
+  display: grid;
+  gap: 0;
+  margin: var(--space-section-md) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.public-registration-flow > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-inline-lg);
+}
+
+.public-registration-flow > li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  bottom: 0;
+  left: calc(1.5rem - (var(--primitive-border-width-default) / 2));
+  width: var(--primitive-border-width-default);
+  background: var(--color-border-interactive);
+}
+
+.public-registration-flow__marker {
+  position: relative;
+  z-index: 1;
+}
+
+.public-registration-flow__marker span {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--primitive-radius-full);
+  color: var(--color-text-on-strong);
+  background: var(--color-surface-brand-strong);
+  font-size: var(--text-label-medium-font-size);
+  line-height: var(--text-label-medium-line-height);
+  font-weight: var(--text-label-font-weight);
+}
+
+.public-registration-flow article {
+  display: grid;
+  gap: var(--space-stack-lg);
+  margin-bottom: var(--space-section-md);
+  padding: var(--composition-card-padding);
+  border: var(--primitive-border-width-default)
+    var(--primitive-border-style-solid) var(--color-border-default);
+  border-radius: var(--primitive-radius-xl);
+  background: var(--color-surface-default);
+}
+
+.public-registration-flow__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-inline-sm);
+}
+
+.public-registration-flow__title svg {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+  color: var(--color-text-brand);
+}
+
+.public-registration-flow h3,
+.public-registration-flow p {
+  margin: 0;
+}
+
+.public-registration-flow h3 {
+  color: var(--color-text-brand);
+  font-size: var(--text-heading-component-font-size);
+  line-height: var(--text-heading-component-line-height);
+  font-weight: var(--text-heading-component-font-weight);
+}
+
+.public-registration-flow article > p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+}
+
+.public-registration-flow article ul {
+  display: grid;
+  gap: var(--space-stack-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.public-registration-flow article li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-inline-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+}
+
+.public-registration-flow article li svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+  flex: 0 0 auto;
+  color: var(--color-success-text);
+}
+
+@media (min-width: 640px) {
+  .public-registration-flow-page__overview-grid {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 768px) {
+  .public-registration-flow {
+    max-width: var(--size-container-reading);
+  }
+
+  .public-registration-flow > li {
+    gap: var(--space-section-md);
+  }
+}

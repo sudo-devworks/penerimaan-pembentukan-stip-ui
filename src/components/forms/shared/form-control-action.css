@@ -1,0 +1,43 @@
+.form-control-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--form-control-action-size);
+  height: var(--form-control-action-size);
+  padding: 0;
+  color: var(--form-control-action-color);
+  background: transparent;
+  border: 0;
+  border-radius: var(--form-control-action-radius);
+  cursor: pointer;
+}
+
+.form-control-action:hover:not(:disabled) {
+  color: var(--form-control-action-hover-color);
+  background: var(--form-control-action-hover-background);
+}
+
+.form-control-action:active:not(:disabled) {
+  background: var(--form-control-action-active-background);
+}
+
+.form-control-action:focus-visible {
+  outline: var(--form-control-focus-width) solid var(--form-control-focus-color);
+  outline-offset: var(--form-control-focus-offset);
+}
+
+.form-control-action:disabled {
+  cursor: not-allowed;
+  opacity: var(--form-control-disabled-opacity);
+}
+
+.form-control-action svg {
+  width: var(--form-control-action-icon-size);
+  height: var(--form-control-action-icon-size);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control-action {
+    transition: none;
+  }
+}

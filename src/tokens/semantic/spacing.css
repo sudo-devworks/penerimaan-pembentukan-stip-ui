@@ -1,0 +1,30 @@
+:root {
+  /* Inline */
+  --space-inline-xs: var(--primitive-space-1);
+  --space-inline-sm: var(--primitive-space-2);
+  --space-inline-md: var(--primitive-space-3);
+  --space-inline-lg: var(--primitive-space-4);
+  --space-inline-xl: var(--primitive-space-6);
+
+  /* Stack */
+  --space-stack-xs: var(--primitive-space-1);
+  --space-stack-sm: var(--primitive-space-2);
+  --space-stack-md: var(--primitive-space-3);
+  --space-stack-lg: var(--primitive-space-4);
+  --space-stack-xl: var(--primitive-space-6);
+  --space-stack-2xl: var(--primitive-space-8);
+
+  /* Section */
+  --space-section-sm: var(--primitive-space-6);
+  --space-section-md: var(--primitive-space-8);
+  --space-section-lg: var(--primitive-space-12);
+  --space-section-xl: var(--primitive-space-16);
+  --space-section-2xl: var(--primitive-space-20);
+  --space-section-3xl: var(--primitive-space-24);
+
+  /* Page Gutters */
+  --space-page-gutter-mobile: var(--primitive-space-4);
+  --space-page-gutter-tablet: var(--primitive-space-6);
+  --space-page-gutter-desktop: var(--primitive-space-8);
+  --space-page-gutter-wide: var(--primitive-space-10);
+}

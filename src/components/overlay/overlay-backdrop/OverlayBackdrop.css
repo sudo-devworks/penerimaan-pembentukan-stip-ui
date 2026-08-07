@@ -1,0 +1,30 @@
+@import "../shared/overlay.tokens.css";
+
+.stip-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--overlay-z-modal);
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: var(--overlay-viewport-padding);
+  background: var(--overlay-backdrop-background);
+  overscroll-behavior: contain;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stip-overlay-backdrop {
+    animation: stip-overlay-backdrop-enter var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+}
+
+@keyframes stip-overlay-backdrop-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

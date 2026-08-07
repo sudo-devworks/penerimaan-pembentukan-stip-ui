@@ -1,0 +1,9 @@
+.stip-success-state {
+  color: var(--result-state-description-color);
+  background: var(--result-state-success-surface);
+  border-color: var(--result-state-success-border);
+}
+
+.stip-success-state .stip-result-state__icon {
+  color: var(--result-state-success-icon);
+}

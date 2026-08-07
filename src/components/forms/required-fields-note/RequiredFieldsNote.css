@@ -1,0 +1,13 @@
+.required-fields-note {
+  margin: 0;
+  color: var(--form-helper-color);
+  font-family: var(--form-message-font-family);
+  font-size: var(--form-message-font-size);
+  line-height: var(--form-message-line-height);
+  overflow-wrap: anywhere;
+}
+
+.required-fields-note [aria-hidden="true"] {
+  color: var(--form-required-color);
+  font-weight: var(--font-weight-semibold);
+}

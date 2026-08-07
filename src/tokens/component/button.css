@@ -1,0 +1,111 @@
+:root {
+  /* Typography */
+  --button-font-weight: var(--text-label-font-weight);
+
+  --button-font-size-sm: var(--text-label-small-font-size);
+  --button-line-height-sm: var(--text-label-small-line-height);
+
+  --button-font-size-md: var(--text-label-medium-font-size);
+  --button-line-height-md: var(--text-label-medium-line-height);
+
+  --button-font-size-lg: var(--text-label-large-font-size);
+  --button-line-height-lg: var(--text-label-large-line-height);
+
+  /* Sizing */
+  --button-height-sm: var(--density-control-height-sm);
+  --button-height-md: var(--density-control-height-md);
+  --button-height-lg: var(--density-control-height-lg);
+
+  --button-padding-inline-sm: var(--density-control-padding-inline-sm);
+  --button-padding-inline-md: var(--density-control-padding-inline-md);
+  --button-padding-inline-lg: var(--density-control-padding-inline-lg);
+
+  --button-touch-target-min: var(--a11y-touch-target-min);
+
+  /* Content */
+  --button-content-gap: var(--space-inline-sm);
+
+  --button-icon-size-sm: var(--size-icon-sm);
+  --button-icon-size-md: var(--size-icon-md);
+  --button-icon-size-lg: var(--size-icon-lg);
+
+  /* Shape */
+  --button-border-width: var(--primitive-border-width-default);
+  --button-border-radius: var(--primitive-radius-md);
+
+  /* Motion */
+  --button-transition-duration: var(--primitive-motion-duration-default);
+  --button-transition-easing: var(--primitive-motion-easing-standard);
+
+  /* Interaction effects */
+  --button-pressed-translate-y: 1px;
+  --button-pressed-shadow: inset 0 1px 2px rgb(7 24 38 / 0.2);
+
+  /* Focus */
+  --button-focus-ring-color: var(--color-focus-ring);
+  --button-focus-ring-width: var(--a11y-focus-ring-width);
+  --button-focus-ring-offset: var(--a11y-focus-ring-offset);
+
+  /* Primary */
+  --button-primary-background: var(--color-action-primary-background);
+  --button-primary-background-hover: var(
+    --color-action-primary-background-hover
+  );
+  --button-primary-background-pressed: var(
+    --color-action-primary-background-pressed
+  );
+  --button-primary-foreground: var(--color-action-primary-foreground);
+  --button-primary-border: var(--color-action-primary-border);
+
+  /* Secondary */
+  --button-secondary-background: var(--color-action-secondary-background);
+  --button-secondary-background-hover: var(
+    --color-action-secondary-background-hover
+  );
+  --button-secondary-background-pressed: var(
+    --color-action-secondary-background-pressed
+  );
+  --button-secondary-foreground: var(--color-action-secondary-foreground);
+  --button-secondary-border: var(--color-action-secondary-border);
+
+  /* Outline */
+  --button-outline-background: transparent;
+  --button-outline-background-hover: var(--color-surface-brand-subtle);
+  --button-outline-background-pressed: var(--primitive-color-navy-100);
+  --button-outline-foreground: var(--color-text-brand);
+  --button-outline-border: var(--color-border-strong);
+
+  /* Ghost */
+  --button-ghost-background: transparent;
+  --button-ghost-background-hover: var(--color-surface-subtle);
+  --button-ghost-background-pressed: var(--color-surface-muted);
+  --button-ghost-foreground: var(--color-text-secondary);
+  --button-ghost-border: transparent;
+
+  /* Text */
+  --button-text-background: transparent;
+  --button-text-background-hover: var(--color-surface-accent-subtle);
+  --button-text-background-pressed: var(--color-surface-accent-selected);
+  --button-text-foreground: var(--color-text-link);
+  --button-text-foreground-hover: var(--color-text-link-hover);
+  --button-text-border: transparent;
+
+  /* Destructive */
+  --button-destructive-background: var(--color-action-danger-background);
+  --button-destructive-background-hover: var(
+    --color-action-danger-background-hover
+  );
+  --button-destructive-background-pressed: var(
+    --color-action-danger-background-pressed
+  );
+  --button-destructive-foreground: var(--color-action-danger-foreground);
+  --button-destructive-border: var(--color-action-danger-border);
+
+  /* Disabled */
+  --button-disabled-background: var(--color-disabled-background);
+  --button-disabled-foreground: var(--color-disabled-foreground);
+  --button-disabled-border: var(--color-disabled-border);
+
+  /* Loading */
+  --button-loading-opacity: var(--primitive-opacity-100);
+}

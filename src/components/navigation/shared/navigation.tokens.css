@@ -1,0 +1,281 @@
+:root {
+  --navigation-focus-ring-width: var(--a11y-focus-ring-width);
+  --navigation-focus-ring-color: var(--color-focus-ring);
+  --navigation-focus-ring-offset: var(--primitive-space-1);
+
+  --breadcrumb-gap: var(--space-inline-sm);
+  --breadcrumb-item-gap: var(--space-inline-sm);
+  --breadcrumb-padding-block: var(--space-stack-xs);
+
+  --breadcrumb-font-size: var(--text-body-small-font-size);
+  --breadcrumb-line-height: var(--text-body-small-line-height);
+
+  --breadcrumb-link-color: var(--color-text-link);
+  --breadcrumb-link-hover-color: var(--color-text-link-hover);
+  --breadcrumb-current-color: var(--color-text-secondary);
+  --breadcrumb-separator-color: var(--color-text-muted);
+
+  --back-navigation-gap: var(--space-inline-xs);
+  --back-navigation-padding-block: var(--space-stack-xs);
+  --back-navigation-padding-inline: var(--space-inline-xs);
+
+  --back-navigation-font-size: var(--text-label-medium-font-size);
+  --back-navigation-line-height: var(--text-label-medium-line-height);
+  --back-navigation-font-weight: var(--text-label-font-weight);
+
+  --back-navigation-color: var(--color-text-link);
+  --back-navigation-hover-color: var(--color-text-link-hover);
+  --back-navigation-hover-background: var(--color-surface-accent-subtle);
+  --back-navigation-radius: var(--primitive-radius-md);
+  --back-navigation-icon-size: var(--size-icon-sm);
+
+  --skip-link-padding-block: var(--space-stack-sm);
+  --skip-link-padding-inline: var(--space-inline-lg);
+  --skip-link-offset: var(--space-inline-md);
+
+  --skip-link-color: var(--color-text-on-primary);
+  --skip-link-background: var(--color-surface-brand-strong);
+  --skip-link-border: var(--color-border-interactive);
+  --skip-link-radius: var(--primitive-radius-md);
+  --skip-link-shadow: var(--primitive-shadow-md);
+
+  --skip-link-font-size: var(--text-label-medium-font-size);
+  --skip-link-line-height: var(--text-label-medium-line-height);
+  --skip-link-font-weight: var(--text-label-font-weight);
+
+  --tabs-list-gap: var(--space-inline-sm);
+  --tabs-list-border-color: var(--color-border-default);
+
+  --tab-min-height: 44px;
+  --tab-padding-block: var(--space-stack-sm);
+  --tab-padding-inline: var(--space-inline-md);
+  --tab-content-gap: var(--space-inline-xs);
+
+  --tab-font-size: var(--text-label-medium-font-size);
+  --tab-line-height: var(--text-label-medium-line-height);
+  --tab-font-weight: var(--text-label-font-weight);
+
+  --tab-color: var(--color-text-secondary);
+  --tab-hover-color: var(--color-text-primary);
+  --tab-hover-background: var(--color-surface-subtle);
+
+  --tab-selected-color: var(--color-text-brand);
+  --tab-selected-background: var(--color-surface-brand-subtle);
+  --tab-selected-border: var(--color-border-interactive);
+
+  --tab-disabled-color: var(--color-disabled-foreground);
+
+  --tab-radius: var(--primitive-radius-md);
+  --tab-indicator-size: var(--primitive-border-width-default);
+
+  --tab-panel-padding-block: var(--space-stack-lg);
+  --tab-panel-padding-inline: 0;
+
+  --tabs-scrollbar-size: var(--primitive-space-1);
+
+  --pagination-gap: var(--space-inline-xs);
+  --pagination-summary-gap: var(--space-inline-sm);
+
+  --pagination-item-size: 44px;
+  --pagination-item-padding-inline: var(--space-inline-sm);
+
+  --pagination-font-size: var(--text-label-medium-font-size);
+  --pagination-line-height: var(--text-label-medium-line-height);
+  --pagination-font-weight: var(--text-label-font-weight);
+
+  --pagination-color: var(--color-text-secondary);
+  --pagination-background: var(--color-surface-default);
+  --pagination-border: var(--color-border-default);
+
+  --pagination-hover-color: var(--color-text-primary);
+  --pagination-hover-background: var(--color-surface-subtle);
+  --pagination-hover-border: var(--color-border-strong);
+
+  --pagination-current-color: var(--color-text-brand);
+  --pagination-current-background: var(--color-surface-brand-subtle);
+  --pagination-current-border: var(--color-border-interactive);
+
+  --pagination-disabled-color: var(--color-disabled-foreground);
+  --pagination-disabled-background: var(--color-disabled-background);
+  --pagination-disabled-border: var(--color-disabled-border);
+
+  --pagination-radius: var(--primitive-radius-md);
+  --pagination-icon-size: var(--size-icon-sm);
+
+  --pagination-ellipsis-color: var(--color-text-muted);
+
+  --stepper-gap: var(--space-inline-md);
+  --stepper-item-gap: var(--space-inline-sm);
+  --stepper-content-gap: var(--space-stack-xs);
+
+  --stepper-indicator-size: 32px;
+  --stepper-indicator-border-width: var(--primitive-border-width-default);
+
+  --stepper-connector-size: var(--primitive-border-width-default);
+  --stepper-connector-length: var(--primitive-space-8);
+
+  --stepper-title-font-size: var(--text-label-medium-font-size);
+  --stepper-title-line-height: var(--text-label-medium-line-height);
+  --stepper-title-font-weight: var(--text-label-font-weight);
+
+  --stepper-description-font-size: var(--text-body-small-font-size);
+  --stepper-description-line-height: var(--text-body-small-line-height);
+
+  --stepper-default-color: var(--color-text-secondary);
+  --stepper-default-background: var(--color-surface-default);
+  --stepper-default-border: var(--color-border-default);
+
+  --stepper-current-color: var(--color-text-brand);
+  --stepper-current-background: var(--color-surface-brand-subtle);
+  --stepper-current-border: var(--color-border-interactive);
+
+  --stepper-completed-color: var(--color-success-text);
+  --stepper-completed-background: var(--color-success-surface-subtle);
+  --stepper-completed-border: var(--color-success-border);
+
+  --stepper-error-color: var(--color-danger-text);
+  --stepper-error-background: var(--color-danger-surface-subtle);
+  --stepper-error-border: var(--color-danger-border);
+
+  --stepper-description-color: var(--color-text-secondary);
+  --stepper-connector-color: var(--color-border-default);
+  --stepper-completed-connector-color: var(--color-success-border);
+
+  --stepper-interactive-hover-background: var(--color-surface-subtle);
+  --stepper-interactive-radius: var(--primitive-radius-md);
+
+  --application-nav-border-width: var(--primitive-border-width-default);
+  --application-nav-radius: var(--primitive-radius-md);
+
+  --application-nav-item-min-height: 44px;
+  --application-nav-item-gap: var(--space-inline-sm);
+  --application-nav-item-padding-block: var(--space-stack-sm);
+  --application-nav-item-padding-inline: var(--space-inline-md);
+
+  --application-nav-item-font-size: var(--text-label-medium-font-size);
+  --application-nav-item-line-height: var(--text-label-medium-line-height);
+  --application-nav-item-font-weight: var(--text-label-font-weight);
+
+  --application-nav-icon-size: var(--size-icon-sm);
+  --application-nav-badge-min-size: var(--primitive-space-5);
+  --application-nav-badge-padding-inline: var(--space-inline-xs);
+
+  --application-nav-color: var(--color-text-secondary);
+  --application-nav-background: transparent;
+
+  --application-nav-hover-color: var(--color-text-primary);
+  --application-nav-hover-background: var(--color-surface-subtle);
+
+  --application-nav-active-color: var(--color-text-brand);
+  --application-nav-active-background: var(--color-surface-brand-subtle);
+  --application-nav-active-border: var(--color-border-interactive);
+
+  --application-nav-disabled-color: var(--color-disabled-foreground);
+  --application-nav-disabled-background: var(--color-disabled-background);
+
+  --application-nav-badge-color: var(--color-text-secondary);
+  --application-nav-badge-background: var(--color-surface-muted);
+
+  --side-navigation-width: 17rem;
+  --side-navigation-padding: var(--space-inline-md);
+  --side-navigation-gap: var(--space-stack-lg);
+  --side-navigation-group-gap: var(--space-stack-sm);
+  --side-navigation-items-gap: var(--space-stack-xs);
+
+  --side-navigation-background: var(--color-surface-default);
+  --side-navigation-border: var(--color-border-default);
+
+  --side-navigation-group-color: var(--color-text-supporting);
+  --side-navigation-group-font-size: var(--text-label-small-font-size);
+  --side-navigation-group-line-height: var(--text-label-small-line-height);
+
+  --top-navigation-gap: var(--space-inline-xs);
+  --top-navigation-padding-block: var(--space-stack-xs);
+  --top-navigation-padding-inline: var(--space-inline-sm);
+  --top-navigation-background: var(--color-surface-default);
+  --top-navigation-border: var(--color-border-default);
+
+  --bottom-navigation-height: 68px;
+  --bottom-navigation-gap: var(--space-inline-xs);
+  --bottom-navigation-padding-block: var(--space-stack-xs);
+  --bottom-navigation-padding-inline: var(--space-inline-xs);
+  --bottom-navigation-background: var(--color-surface-default);
+  --bottom-navigation-border: var(--color-border-default);
+  --bottom-navigation-shadow: var(--primitive-shadow-md);
+
+  --bottom-navigation-icon-size: var(--size-icon-md);
+  --bottom-navigation-label-font-size: var(--text-label-small-font-size);
+  --bottom-navigation-label-line-height: var(--text-label-small-line-height);
+}
+
+[data-density="comfortable"] {
+  --breadcrumb-gap: var(--space-inline-md);
+  --breadcrumb-item-gap: var(--space-inline-md);
+  --breadcrumb-padding-block: var(--space-stack-sm);
+
+  --back-navigation-gap: var(--space-inline-sm);
+  --back-navigation-padding-block: var(--space-stack-sm);
+  --back-navigation-padding-inline: var(--space-inline-sm);
+
+  --tabs-list-gap: var(--space-inline-md);
+
+  --tab-padding-block: var(--space-stack-md);
+  --tab-padding-inline: var(--space-inline-lg);
+  --tab-content-gap: var(--space-inline-sm);
+
+  --tab-panel-padding-block: var(--space-stack-xl);
+
+  --pagination-gap: var(--space-inline-sm);
+  --pagination-summary-gap: var(--space-inline-md);
+  --pagination-item-padding-inline: var(--space-inline-md);
+
+  --stepper-gap: var(--space-inline-lg);
+  --stepper-item-gap: var(--space-inline-md);
+  --stepper-content-gap: var(--space-stack-sm);
+  --stepper-indicator-size: 36px;
+
+  --application-nav-item-gap: var(--space-inline-md);
+  --application-nav-item-padding-block: var(--space-stack-md);
+  --application-nav-item-padding-inline: var(--space-inline-lg);
+
+  --side-navigation-padding: var(--space-inline-lg);
+  --side-navigation-gap: var(--space-stack-xl);
+
+  --top-navigation-gap: var(--space-inline-sm);
+}
+
+[data-density="compact"] {
+  --breadcrumb-gap: var(--space-inline-xs);
+  --breadcrumb-item-gap: var(--space-inline-xs);
+  --breadcrumb-padding-block: var(--space-stack-xs);
+
+  --back-navigation-gap: var(--space-inline-xs);
+  --back-navigation-padding-block: var(--space-stack-xs);
+
+  --tabs-list-gap: var(--space-inline-xs);
+
+  --tab-padding-block: var(--space-stack-xs);
+  --tab-padding-inline: var(--space-inline-sm);
+  --tab-content-gap: var(--space-inline-xs);
+
+  --tab-panel-padding-block: var(--space-stack-md);
+
+  --pagination-gap: var(--space-inline-xs);
+  --pagination-summary-gap: var(--space-inline-xs);
+  --pagination-item-padding-inline: var(--space-inline-xs);
+
+  --stepper-gap: var(--space-inline-sm);
+  --stepper-item-gap: var(--space-inline-xs);
+  --stepper-content-gap: var(--space-stack-xs);
+  --stepper-indicator-size: 28px;
+
+  --application-nav-item-gap: var(--space-inline-xs);
+  --application-nav-item-padding-block: var(--space-stack-xs);
+  --application-nav-item-padding-inline: var(--space-inline-sm);
+
+  --side-navigation-padding: var(--space-inline-sm);
+  --side-navigation-gap: var(--space-stack-md);
+  --side-navigation-group-gap: var(--space-stack-xs);
+
+  --top-navigation-gap: var(--space-inline-xs);
+}

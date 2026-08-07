@@ -1,0 +1,15 @@
+:root {
+  --primitive-color-neutral-0: #ffffff;
+  --primitive-color-neutral-25: #fcfcfd;
+  --primitive-color-neutral-50: #f9fafb;
+  --primitive-color-neutral-100: #f3f4f6;
+  --primitive-color-neutral-200: #e5e7eb;
+  --primitive-color-neutral-300: #d1d5db;
+  --primitive-color-neutral-400: #9ca3af;
+  --primitive-color-neutral-500: #6b7280;
+  --primitive-color-neutral-600: #4b5563;
+  --primitive-color-neutral-700: #374151;
+  --primitive-color-neutral-800: #1f2937;
+  --primitive-color-neutral-900: #111827;
+  --primitive-color-neutral-950: #0f172a;
+}

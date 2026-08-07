@@ -1,0 +1,8 @@
+:root {
+  --primitive-border-width-default: 1px;
+  --primitive-border-width-strong: 2px;
+  --primitive-border-width-focus: 2px;
+
+  --primitive-border-style-solid: solid;
+  --primitive-border-style-dashed: dashed;
+}

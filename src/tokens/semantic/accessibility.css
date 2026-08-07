@@ -1,0 +1,11 @@
+:root {
+  --a11y-focus-ring-width: var(--primitive-border-width-focus);
+
+  --a11y-focus-ring-offset: var(--primitive-space-0-5);
+
+  --a11y-touch-target-min: var(--primitive-touch-target-min);
+
+  --a11y-reading-width-min: 45ch;
+  --a11y-reading-width-ideal: 65ch;
+  --a11y-reading-width-max: 75ch;
+}

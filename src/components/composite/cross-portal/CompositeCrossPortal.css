@@ -1,0 +1,109 @@
+.cross-portal-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-xl);
+  width: 100%;
+  min-width: 0;
+}
+
+.cross-portal-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-md);
+  min-width: 0;
+}
+
+.cross-portal-page__surface {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-md);
+  min-width: 0;
+  padding: var(--space-inset-lg);
+  border: var(--border-width-1) solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-default);
+}
+
+.cross-portal-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-stack-lg) var(--space-inline-lg);
+  min-width: 0;
+}
+
+.cross-portal-page__sidebar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
+  align-items: start;
+  gap: var(--space-inline-xl);
+  min-width: 0;
+}
+
+.cross-portal-page__list {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cross-portal-page__list > * + * {
+  border-block-start: var(--border-width-1) solid var(--color-border-subtle);
+}
+
+.cross-portal-page__timeline {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cross-portal-page__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-stack-sm) var(--space-inline-sm);
+}
+
+.cross-portal-page__filter-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-stack-md);
+}
+
+.cross-portal-page__placeholder {
+  min-height: 12rem;
+  padding: var(--space-inset-lg);
+  border: var(--border-width-1) dashed var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--color-text-supporting);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+}
+
+@media (max-width: 63.9375rem) {
+  .cross-portal-page__sidebar-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .cross-portal-page {
+    gap: var(--space-stack-lg);
+  }
+
+  .cross-portal-page__surface {
+    padding: var(--space-inset-md);
+  }
+
+  .cross-portal-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cross-portal-page__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cross-portal-page__actions > * {
+    width: 100%;
+  }
+}

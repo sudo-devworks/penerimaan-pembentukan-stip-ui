@@ -1,0 +1,29 @@
+import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as BackNavigationStories from "./BackNavigation.stories";
+
+<Meta of={BackNavigationStories} />
+
+<Title />
+
+`BackNavigation` menyediakan tindakan kembali dengan tujuan yang jelas.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Link mode
+
+Gunakan link ketika destination sudah diketahui:
+
+```tsx
+<BackNavigation href="/peserta">Kembali ke daftar peserta</BackNavigation>
+```

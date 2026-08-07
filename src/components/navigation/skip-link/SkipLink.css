@@ -1,0 +1,41 @@
+@import "../shared/navigation.tokens.css";
+
+.stip-skip-link {
+  position: fixed;
+  z-index: 10000;
+
+  inset-block-start: var(--skip-link-offset);
+  inset-inline-start: var(--skip-link-offset);
+
+  padding: var(--skip-link-padding-block) var(--skip-link-padding-inline);
+
+  color: var(--skip-link-color);
+  background: var(--skip-link-background);
+  border: var(--primitive-border-width-default) solid var(--skip-link-border);
+  border-radius: var(--skip-link-radius);
+
+  box-shadow: var(--skip-link-shadow);
+
+  font-size: var(--skip-link-font-size);
+  font-weight: var(--skip-link-font-weight);
+  line-height: var(--skip-link-line-height);
+  text-decoration: none;
+
+  transform: translateY(calc(-100% - 4rem));
+  transition: transform 120ms ease-out;
+}
+
+.stip-skip-link:focus,
+.stip-skip-link:focus-visible {
+  transform: translateY(0);
+
+  outline: var(--navigation-focus-ring-width) solid
+    var(--navigation-focus-ring-color);
+  outline-offset: var(--navigation-focus-ring-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stip-skip-link {
+    transition: none;
+  }
+}

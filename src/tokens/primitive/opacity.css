@@ -1,0 +1,9 @@
+:root {
+  --primitive-opacity-full: 1;
+  --primitive-opacity-muted: 0.72;
+  --primitive-opacity-disabled: 0.5;
+
+  --primitive-opacity-backdrop-light: 0.36;
+  --primitive-opacity-backdrop-default: 0.52;
+  --primitive-opacity-backdrop-strong: 0.64;
+}

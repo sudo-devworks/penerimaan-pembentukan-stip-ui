@@ -1,0 +1,31 @@
+﻿import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as LoadingMessageStories from "./LoadingMessage.stories";
+
+<Meta of={LoadingMessageStories} />
+
+<Title />
+
+`LoadingMessage` menggabungkan loading indicator dengan pesan yang dapat dibaca
+dan diumumkan kepada assistive technology.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Penggunaan
+
+```tsx
+<LoadingMessage
+  title="Memuat data pesertaâ€¦"
+  description="Mohon tunggu sebentar."
+/>
+```

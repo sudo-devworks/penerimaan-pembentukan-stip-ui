@@ -1,0 +1,26 @@
+:root {
+  /* Icon Sizes */
+  --primitive-icon-size-xs: 0.75rem;
+  --primitive-icon-size-sm: 1rem;
+  --primitive-icon-size-md: 1.25rem;
+  --primitive-icon-size-lg: 1.5rem;
+  --primitive-icon-size-xl: 2rem;
+  --primitive-icon-size-2xl: 2.5rem;
+  --primitive-icon-size-3xl: 3rem;
+
+  /* Touch Target */
+  --primitive-touch-target-min: 2.75rem;
+
+  /* Container Widths */
+  --primitive-container-reading: 45rem;
+  --primitive-container-form: 45rem;
+  --primitive-container-process: 55rem;
+  --primitive-container-dashboard: 70rem;
+  --primitive-container-content: 75rem;
+  --primitive-container-wide: 80rem;
+  --primitive-container-hero: 85rem;
+
+  /* Internal Layout */
+  --primitive-sidebar-width: 16rem;
+  --primitive-sidebar-collapsed-width: 4.5rem;
+}

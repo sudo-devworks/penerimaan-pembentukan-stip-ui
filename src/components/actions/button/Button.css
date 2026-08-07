@@ -1,0 +1,258 @@
+.stip-button {
+  --button-current-height: var(--button-height-md);
+  --button-current-padding-inline: var(--button-padding-inline-md);
+  --button-current-font-size: var(--button-font-size-md);
+  --button-current-line-height: var(--button-line-height-md);
+  --button-current-icon-size: var(--button-icon-size-md);
+
+  --button-current-background: var(--button-primary-background);
+  --button-current-background-hover: var(--button-primary-background-hover);
+  --button-current-background-pressed: var(--button-primary-background-pressed);
+  --button-current-foreground: var(--button-primary-foreground);
+  --button-current-foreground-hover: var(--button-primary-foreground);
+  --button-current-border: var(--button-primary-border);
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: max(var(--button-current-height), var(--button-touch-target-min));
+
+  padding-block: 0;
+  padding-inline: var(--button-current-padding-inline);
+
+  overflow: hidden;
+
+  font-family: var(--font-family-sans);
+  font-size: var(--button-current-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-current-line-height);
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+
+  color: var(--button-current-foreground);
+  background-color: var(--button-current-background);
+
+  border: var(--button-border-width) solid var(--button-current-border);
+  border-radius: var(--button-border-radius);
+
+  cursor: pointer;
+
+  transition:
+    color var(--button-transition-duration) var(--button-transition-easing),
+    background-color var(--button-transition-duration)
+      var(--button-transition-easing),
+    border-color var(--button-transition-duration)
+      var(--button-transition-easing),
+    box-shadow var(--button-transition-duration) var(--button-transition-easing),
+    transform var(--button-transition-duration) var(--button-transition-easing);
+}
+
+/* Variants */
+
+.stip-button[data-variant="secondary"] {
+  --button-current-background: var(--button-secondary-background);
+  --button-current-background-hover: var(--button-secondary-background-hover);
+  --button-current-background-pressed: var(
+    --button-secondary-background-pressed
+  );
+  --button-current-foreground: var(--button-secondary-foreground);
+  --button-current-foreground-hover: var(--button-secondary-foreground);
+  --button-current-border: var(--button-secondary-border);
+}
+
+.stip-button[data-variant="outline"] {
+  --button-current-background: var(--button-outline-background);
+  --button-current-background-hover: var(--button-outline-background-hover);
+  --button-current-background-pressed: var(--button-outline-background-pressed);
+  --button-current-foreground: var(--button-outline-foreground);
+  --button-current-foreground-hover: var(--button-outline-foreground);
+  --button-current-border: var(--button-outline-border);
+}
+
+.stip-button[data-variant="ghost"] {
+  --button-current-background: var(--button-ghost-background);
+  --button-current-background-hover: var(--button-ghost-background-hover);
+  --button-current-background-pressed: var(--button-ghost-background-pressed);
+  --button-current-foreground: var(--button-ghost-foreground);
+  --button-current-foreground-hover: var(--button-ghost-foreground);
+  --button-current-border: var(--button-ghost-border);
+}
+
+.stip-button[data-variant="text"] {
+  --button-current-background: var(--button-text-background);
+  --button-current-background-hover: var(--button-text-background-hover);
+  --button-current-background-pressed: var(--button-text-background-pressed);
+  --button-current-foreground: var(--button-text-foreground);
+  --button-current-foreground-hover: var(--button-text-foreground-hover);
+  --button-current-border: var(--button-text-border);
+}
+
+.stip-button[data-variant="destructive"] {
+  --button-current-background: var(--button-destructive-background);
+  --button-current-background-hover: var(--button-destructive-background-hover);
+  --button-current-background-pressed: var(
+    --button-destructive-background-pressed
+  );
+  --button-current-foreground: var(--button-destructive-foreground);
+  --button-current-foreground-hover: var(--button-destructive-foreground);
+  --button-current-border: var(--button-destructive-border);
+}
+
+/* Interaction states */
+
+.stip-button:hover:not(:disabled) {
+  color: var(--button-current-foreground-hover);
+  background-color: var(--button-current-background-hover);
+}
+
+.stip-button:active:not(:disabled) {
+  color: var(--button-current-foreground-hover);
+  background-color: var(--button-current-background-pressed);
+  box-shadow: var(--button-pressed-shadow);
+  transform: translateY(var(--button-pressed-translate-y));
+}
+
+.stip-button:focus {
+  outline: none;
+}
+
+.stip-button:focus-visible {
+  outline: var(--button-focus-ring-width) solid var(--button-focus-ring-color);
+  outline-offset: var(--button-focus-ring-offset);
+}
+
+/*
+ * Loading memakai native disabled untuk mencegah
+ * pengiriman ulang, tetapi tetap mempertahankan
+ * identitas visual variant.
+ */
+.stip-button:disabled:not([data-loading="true"]) {
+  color: var(--button-disabled-foreground);
+  background-color: var(--button-disabled-background);
+  border-color: var(--button-disabled-border);
+
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.stip-button[data-loading="true"] {
+  color: var(--button-current-foreground);
+  background-color: var(--button-current-background);
+  border-color: var(--button-current-border);
+
+  box-shadow: none;
+  cursor: wait;
+  transform: none;
+}
+
+/* Sizes */
+
+.stip-button[data-size="sm"] {
+  --button-current-height: var(--button-height-sm);
+  --button-current-padding-inline: var(--button-padding-inline-sm);
+  --button-current-font-size: var(--button-font-size-sm);
+  --button-current-line-height: var(--button-line-height-sm);
+  --button-current-icon-size: var(--button-icon-size-sm);
+}
+
+.stip-button[data-size="lg"] {
+  --button-current-height: var(--button-height-lg);
+  --button-current-padding-inline: var(--button-padding-inline-lg);
+  --button-current-font-size: var(--button-font-size-lg);
+  --button-current-line-height: var(--button-line-height-lg);
+  --button-current-icon-size: var(--button-icon-size-lg);
+}
+
+.stip-button--full-width {
+  width: 100%;
+}
+
+/* Content */
+
+.stip-button__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-content-gap);
+
+  min-width: 0;
+  max-width: 100%;
+}
+
+.stip-button__label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.stip-button__icon,
+.stip-button__spinner {
+  flex: 0 0 auto;
+
+  width: var(--button-current-icon-size);
+  height: var(--button-current-icon-size);
+}
+
+.stip-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stip-button__icon > svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+.stip-button__spinner {
+  display: inline-block;
+
+  border: var(--button-border-width) solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: 50%;
+
+  animation: stip-button-spin var(--primitive-motion-duration-slow) linear
+    infinite;
+}
+
+.stip-button__sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+@keyframes stip-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stip-button {
+    transition: none;
+  }
+
+  .stip-button:active:not(:disabled) {
+    transform: none;
+  }
+
+  .stip-button__spinner {
+    animation-duration: calc(var(--primitive-motion-duration-slow) * 2);
+  }
+}

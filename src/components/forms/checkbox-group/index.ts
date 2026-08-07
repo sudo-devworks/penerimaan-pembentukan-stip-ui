@@ -1,0 +1,4 @@
+import "./CheckboxGroup.css";
+
+export { CheckboxGroup } from "./CheckboxGroup";
+export type { CheckboxGroupProps } from "./CheckboxGroup.types";

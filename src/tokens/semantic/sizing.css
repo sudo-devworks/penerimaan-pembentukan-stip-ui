@@ -1,0 +1,35 @@
+:root {
+  --size-touch-target-min: var(--primitive-touch-target-min);
+
+  --size-icon-xs: var(--primitive-icon-size-xs);
+
+  --size-icon-sm: var(--primitive-icon-size-sm);
+
+  --size-icon-md: var(--primitive-icon-size-md);
+
+  --size-icon-lg: var(--primitive-icon-size-lg);
+
+  --size-icon-xl: var(--primitive-icon-size-xl);
+
+  --size-icon-2xl: var(--primitive-icon-size-2xl);
+
+  --size-icon-3xl: var(--primitive-icon-size-3xl);
+
+  --size-container-reading: var(--primitive-container-reading);
+
+  --size-container-form: var(--primitive-container-form);
+
+  --size-container-process: var(--primitive-container-process);
+
+  --size-container-dashboard: var(--primitive-container-dashboard);
+
+  --size-container-content: var(--primitive-container-content);
+
+  --size-container-wide: var(--primitive-container-wide);
+
+  --size-container-hero: var(--primitive-container-hero);
+
+  --size-sidebar: var(--primitive-sidebar-width);
+
+  --size-sidebar-collapsed: var(--primitive-sidebar-collapsed-width);
+}

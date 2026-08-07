@@ -1,0 +1,42 @@
+@import "../shared/overlay.tokens.css";
+
+.stip-popover {
+  z-index: var(--overlay-z-dropdown);
+  width: max-content;
+  max-width: min(22rem, calc(100vw - (var(--overlay-viewport-padding) * 2)));
+  border: var(--border-width-thin) solid var(--overlay-surface-border);
+  border-radius: var(--overlay-surface-radius);
+  background: var(--overlay-surface-background);
+  box-shadow: var(--overlay-surface-shadow);
+  color: var(--color-text-primary);
+  padding: var(--space-4);
+}
+
+.stip-popover:focus {
+  outline: none;
+}
+
+.stip-popover__arrow {
+  fill: var(--overlay-surface-background);
+  stroke: var(--overlay-surface-border);
+  stroke-width: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stip-popover {
+    animation: stip-popover-enter var(--overlay-motion-duration)
+      var(--overlay-motion-easing);
+  }
+}
+
+@keyframes stip-popover-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-1)) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,25 @@
+[data-portal="participant"] {
+  --composition-page-background: var(--color-surface-page);
+
+  --composition-content-max-width: var(--size-container-dashboard);
+
+  --composition-reading-max-width: var(--size-container-form);
+
+  --composition-page-gutter: var(--space-page-gutter-mobile);
+
+  --composition-section-gap: var(--space-section-md);
+
+  --composition-card-padding: var(--density-card-padding-lg);
+}
+
+@media (min-width: 640px) {
+  [data-portal="participant"] {
+    --composition-page-gutter: var(--space-page-gutter-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-portal="participant"] {
+    --composition-page-gutter: var(--space-page-gutter-desktop);
+  }
+}

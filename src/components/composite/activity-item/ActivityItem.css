@@ -1,0 +1,96 @@
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-inline-md);
+  width: 100%;
+  min-width: 0;
+  padding-block: var(--space-stack-md);
+}
+
+.activity-item__icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-accent-subtle);
+  color: var(--color-text-brand);
+}
+
+.activity-item__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-stack-xs);
+  min-width: 0;
+}
+
+.activity-item__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-inline-md);
+  min-width: 0;
+}
+
+.activity-item__title {
+  min-width: 0;
+  color: var(--color-text-primary);
+  font-size: var(--text-body-default-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--text-body-default-line-height);
+  overflow-wrap: anywhere;
+}
+
+.activity-item__timestamp {
+  flex: none;
+  color: var(--color-text-supporting);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+  white-space: nowrap;
+}
+
+.activity-item__description {
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-default-font-size);
+  line-height: var(--text-body-default-line-height);
+  overflow-wrap: anywhere;
+}
+
+.activity-item__metadata {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-stack-xs) var(--space-inline-sm);
+  color: var(--color-text-supporting);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+}
+
+.activity-item__actions {
+  display: flex;
+  flex: none;
+  align-items: flex-start;
+}
+
+@media (max-width: 39.9375rem) {
+  .activity-item {
+    flex-wrap: wrap;
+  }
+
+  .activity-item__header {
+    flex-direction: column;
+    gap: var(--space-stack-xs);
+  }
+
+  .activity-item__timestamp {
+    white-space: normal;
+  }
+
+  .activity-item__actions {
+    width: 100%;
+    padding-inline-start: calc(2.5rem + var(--space-inline-md));
+  }
+}

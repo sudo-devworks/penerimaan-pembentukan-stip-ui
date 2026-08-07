@@ -1,0 +1,27 @@
+[data-portal="internal"] {
+  --composition-page-background: var(--color-surface-page);
+
+  --composition-content-max-width: 100%;
+
+  --composition-reading-max-width: var(--size-container-form);
+
+  --composition-page-gutter: var(--space-page-gutter-mobile);
+
+  --composition-section-gap: var(--space-section-sm);
+
+  --composition-card-padding: var(--density-card-padding-md);
+}
+
+@media (min-width: 768px) {
+  [data-portal="internal"] {
+    --composition-page-gutter: var(--space-page-gutter-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-portal="internal"] {
+    --composition-page-gutter: var(--space-page-gutter-desktop);
+
+    --composition-section-gap: var(--space-section-md);
+  }
+}

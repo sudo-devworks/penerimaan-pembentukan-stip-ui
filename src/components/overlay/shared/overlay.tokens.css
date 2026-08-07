@@ -1,0 +1,31 @@
+:root {
+  --overlay-backdrop-background: color-mix(
+    in srgb,
+    var(--color-neutral-950) 48%,
+    transparent
+  );
+
+  --overlay-surface-background: var(--color-background-surface);
+
+  --overlay-surface-border: var(--color-border-default);
+
+  --overlay-surface-radius: var(--radius-lg);
+
+  --overlay-surface-shadow: var(--shadow-xl);
+
+  --overlay-content-gap: var(--space-4);
+
+  --overlay-viewport-padding: var(--space-4);
+
+  --overlay-position-offset: var(--space-2);
+
+  --overlay-z-dropdown: 700;
+
+  --overlay-z-modal: 800;
+
+  --overlay-z-toast: 900;
+
+  --overlay-motion-duration: var(--duration-fast);
+
+  --overlay-motion-easing: var(--easing-standard);
+}

@@ -1,0 +1,17 @@
+:root {
+  /* Duration */
+  --primitive-motion-duration-instant: 0ms;
+  --primitive-motion-duration-fast: 100ms;
+  --primitive-motion-duration-default: 160ms;
+  --primitive-motion-duration-moderate: 240ms;
+  --primitive-motion-duration-slow: 320ms;
+
+  /* Easing */
+  --primitive-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --primitive-motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+
+  --primitive-motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  --primitive-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+}

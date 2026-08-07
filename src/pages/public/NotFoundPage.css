@@ -1,0 +1,40 @@
+.public-not-found {
+  padding-block: var(--composition-section-gap);
+}
+
+.public-not-found__inner {
+  max-width: var(--size-container-reading);
+  display: grid;
+  justify-items: start;
+  gap: var(--space-stack-lg);
+}
+
+.public-not-found__code {
+  margin: 0;
+  color: var(--color-text-link);
+  font-size: var(--text-display-large-font-size);
+  line-height: var(--text-display-large-line-height);
+  font-weight: var(--text-display-large-font-weight);
+}
+
+.public-not-found h1 {
+  margin: 0;
+  color: var(--color-text-brand);
+  font-size: var(--text-heading-page-font-size);
+  line-height: var(--text-heading-page-line-height);
+  font-weight: var(--text-heading-page-font-weight);
+}
+
+.public-not-found__inner > p:last-of-type {
+  max-width: 38rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-large-font-size);
+  line-height: var(--text-body-large-line-height);
+}
+
+.public-not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-inline-md);
+}

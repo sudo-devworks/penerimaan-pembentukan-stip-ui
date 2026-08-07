@@ -1,0 +1,82 @@
+@import "../shared/feedback.tokens.css";
+
+.stip-skeleton {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  width: 100%;
+  min-height: var(--primitive-space-4);
+
+  background: var(--skeleton-background);
+  border-radius: var(--skeleton-radius);
+}
+
+.stip-skeleton[data-circular="true"] {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.stip-skeleton[data-animation="pulse"] {
+  animation: stip-skeleton-pulse 1600ms ease-in-out infinite;
+}
+
+.stip-skeleton[data-animation="shimmer"]::after {
+  position: absolute;
+  inset: 0;
+
+  content: "";
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--skeleton-highlight),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  animation: stip-skeleton-shimmer 1800ms ease-in-out infinite;
+}
+
+.stip-skeleton-text {
+  display: grid;
+  gap: var(--skeleton-gap);
+  width: 100%;
+}
+
+.stip-skeleton-text__line {
+  min-height: var(--primitive-space-3);
+  border-radius: var(--skeleton-text-radius);
+}
+
+.stip-skeleton-block {
+  min-height: var(--primitive-space-16);
+}
+
+@keyframes stip-skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes stip-skeleton-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stip-skeleton[data-animation="pulse"] {
+    animation: none;
+  }
+
+  .stip-skeleton[data-animation="shimmer"]::after {
+    display: none;
+    animation: none;
+  }
+}

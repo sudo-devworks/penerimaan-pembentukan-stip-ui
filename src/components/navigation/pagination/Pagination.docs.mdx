@@ -1,0 +1,29 @@
+import {
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as PaginationStories from "./Pagination.stories";
+
+<Meta of={PaginationStories} />
+
+<Title />
+
+`Pagination` digunakan untuk berpindah antarhalaman pada kumpulan data.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Button mode
+
+Gunakan untuk pagination yang mengubah state lokal:
+
+```tsx
+<Pagination page={page} totalPages={24} onPageChange={setPage} />
+```

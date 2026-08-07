@@ -1,0 +1,11 @@
+:root {
+  --primitive-z-base: 0;
+  --primitive-z-raised: 10;
+  --primitive-z-sticky: 100;
+  --primitive-z-dropdown: 200;
+  --primitive-z-popover: 300;
+  --primitive-z-drawer: 400;
+  --primitive-z-modal: 500;
+  --primitive-z-toast: 600;
+  --primitive-z-critical: 700;
+}

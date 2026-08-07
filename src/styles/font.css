@@ -1,0 +1,5 @@
+@import "@fontsource-variable/inter";
+
+html {
+  font-family: var(--font-family-sans);
+}

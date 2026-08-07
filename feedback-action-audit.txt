@@ -1,0 +1,64 @@
+src\components\actions\ActionComponents.integration.test.tsx:36:          aria-label="Buka notifikasi"
+src\components\actions\ActionComponents.integration.test.tsx:39:        <ButtonGroup aria-label="Aksi formulir">
+src\components\actions\button\Button.types.ts:6:export type ButtonVariant =
+src\components\actions\button\Button.types.ts:14:export type ButtonSize = 'sm' | 'md' | 'lg';
+src\components\actions\button\Button.types.ts:16:export interface ButtonProps
+src\components\actions\button-group\ButtonGroup.stories.tsx:57:      aria-label="Aksi formulir"
+src\components\actions\button-group\ButtonGroup.stories.tsx:73:      aria-label="Aksi dialog"
+src\components\actions\button-group\ButtonGroup.stories.tsx:97:        aria-label="Aksi pembayaran"
+src\components\actions\button-group\ButtonGroup.stories.tsx:128:      aria-label="Aksi pendaftaran"
+src\components\actions\button-group\ButtonGroup.stories.tsx:134:      <ButtonGroup aria-label="Aksi utama">
+src\components\actions\button-group\ButtonGroup.stories.tsx:151:      aria-label="Toolbar peserta"
+src\components\actions\button-group\ButtonGroup.test.tsx:38:      <ButtonGroup aria-label="Aksi formulir">
+src\components\actions\button-group\ButtonGroup.test.tsx:67:        aria-label="Aksi"
+src\components\actions\button-group\ButtonGroup.test.tsx:102:        aria-label="Aksi"
+src\components\actions\button-group\ButtonGroup.tsx:28:      'aria-label': ariaLabel,
+src\components\actions\button-group\ButtonGroup.tsx:29:      'aria-labelledby': ariaLabelledBy,
+src\components\actions\button-group\ButtonGroup.tsx:48:        aria-label={ariaLabel}
+src\components\actions\button-group\ButtonGroup.tsx:49:        aria-labelledby={ariaLabelledBy}
+src\components\actions\button-group\ButtonGroup.types.ts:6:export type ButtonGroupDirection =
+src\components\actions\button-group\ButtonGroup.types.ts:10:export type ButtonGroupAlignment =
+src\components\actions\button-group\ButtonGroup.types.ts:17:export interface ButtonGroupProps
+src\components\actions\dropdown-action\DropdownAction.tsx:297:          aria-label={menuLabel ?? label}
+src\components\actions\icon-button\IconButton.stories.tsx:62:    'aria-label': 'Buka notifikasi',
+src\components\actions\icon-button\IconButton.stories.tsx:94:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.stories.tsx:100:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.stories.tsx:106:        aria-label="Buka menu"
+src\components\actions\icon-button\IconButton.stories.tsx:112:        aria-label="Tampilkan password"
+src\components\actions\icon-button\IconButton.stories.tsx:118:        aria-label="Hapus item"
+src\components\actions\icon-button\IconButton.stories.tsx:141:        aria-label="Buka notifikasi kecil"
+src\components\actions\icon-button\IconButton.stories.tsx:147:        aria-label="Buka notifikasi sedang"
+src\components\actions\icon-button\IconButton.stories.tsx:153:        aria-label="Buka notifikasi besar"
+src\components\actions\icon-button\IconButton.stories.tsx:175:        aria-label="Tutup dialog"
+src\components\actions\icon-button\IconButton.stories.tsx:182:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.stories.tsx:198:      aria-label="Navigasi halaman"
+src\components\actions\icon-button\IconButton.stories.tsx:206:        aria-label="Halaman sebelumnya"
+src\components\actions\icon-button\IconButton.stories.tsx:212:        aria-label="Halaman berikutnya"
+src\components\actions\icon-button\IconButton.stories.tsx:235:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.stories.tsx:241:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.stories.tsx:249:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.stories.tsx:305:              aria-label={`Buka notifikasi ${density}`}
+src\components\actions\icon-button\IconButton.stories.tsx:311:              aria-label={`Segarkan data ${density}`}
+src\components\actions\icon-button\IconButton.stories.tsx:317:              aria-label={`Buka menu ${density}`}
+src\components\actions\icon-button\IconButton.test.tsx:28:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:44:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:66:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:87:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:108:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.test.tsx:133:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.test.tsx:149:        aria-label="Segarkan data"
+src\components\actions\icon-button\IconButton.test.tsx:173:          aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:193:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:211:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:235:        aria-label="Kirim formulir"
+src\components\actions\icon-button\IconButton.test.tsx:251:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:273:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.test.tsx:289:        aria-label="Buka notifikasi"
+src\components\actions\icon-button\IconButton.tsx:18:      'aria-label': ariaLabel,
+src\components\actions\icon-button\IconButton.tsx:44:        aria-label={accessibleLabel}
+src\components\actions\icon-button\IconButton.types.ts:6:export type IconButtonVariant =
+src\components\actions\icon-button\IconButton.types.ts:13:export type IconButtonSize = 'sm' | 'md' | 'lg';
+src\components\actions\icon-button\IconButton.types.ts:15:export type IconButtonShape = 'rounded' | 'circular';
+src\components\actions\icon-button\IconButton.types.ts:17:export interface IconButtonProps
+src\components\actions\icon-button\IconButton.types.ts:20:    'children' | 'aria-label'
+src\components\actions\icon-button\IconButton.types.ts:30:  'aria-label': string;

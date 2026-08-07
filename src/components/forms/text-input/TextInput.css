@@ -1,0 +1,64 @@
+.text-input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: calc(
+    var(--form-control-height-md) - (var(--form-control-border-width) * 2)
+  );
+  padding: 0;
+  color: inherit;
+  font-family: var(--form-control-font-family);
+  font-size: var(--form-control-font-size-md);
+  font-weight: var(--form-control-font-weight);
+  line-height: var(--form-control-line-height);
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.text-input::placeholder {
+  color: var(--form-control-placeholder);
+  opacity: 1;
+}
+
+.text-input:disabled {
+  cursor: not-allowed;
+}
+
+.text-input:read-only {
+  cursor: text;
+}
+
+.text-input:-webkit-autofill,
+.text-input:-webkit-autofill:hover,
+.text-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--form-control-text);
+  box-shadow: 0 0 0 1000px var(--form-control-background) inset;
+  transition: background-color 9999s ease-out;
+}
+
+.form-control-frame[data-size="sm"] .text-input {
+  min-height: calc(
+    var(--form-control-height-sm) - (var(--form-control-border-width) * 2)
+  );
+  font-size: var(--form-control-font-size-sm);
+}
+
+.form-control-frame[data-size="lg"] .text-input {
+  min-height: calc(
+    var(--form-control-height-lg) - (var(--form-control-border-width) * 2)
+  );
+  font-size: var(--form-control-font-size-lg);
+}
+
+/* Hilangkan spinner hanya pada implementasi visual.
+   Keyboard dan nilai native number tetap dipertahankan. */
+.text-input[type="number"] {
+  appearance: textfield;
+}
+
+.text-input[type="number"]::-webkit-inner-spin-button,
+.text-input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}

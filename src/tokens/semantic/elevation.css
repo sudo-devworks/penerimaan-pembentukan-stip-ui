@@ -1,0 +1,29 @@
+:root {
+  --elevation-flat-shadow: var(--primitive-shadow-none);
+
+  --elevation-raised-shadow: var(--primitive-shadow-low);
+
+  --elevation-floating-shadow: var(--primitive-shadow-medium);
+
+  --elevation-drawer-shadow: var(--primitive-shadow-high);
+
+  --elevation-overlay-shadow: var(--primitive-shadow-overlay);
+
+  --elevation-z-base: var(--primitive-z-base);
+
+  --elevation-z-raised: var(--primitive-z-raised);
+
+  --elevation-z-sticky: var(--primitive-z-sticky);
+
+  --elevation-z-dropdown: var(--primitive-z-dropdown);
+
+  --elevation-z-popover: var(--primitive-z-popover);
+
+  --elevation-z-drawer: var(--primitive-z-drawer);
+
+  --elevation-z-modal: var(--primitive-z-modal);
+
+  --elevation-z-toast: var(--primitive-z-toast);
+
+  --elevation-z-critical: var(--primitive-z-critical);
+}

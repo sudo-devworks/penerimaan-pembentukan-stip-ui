@@ -1,0 +1,107 @@
+.stat-group {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-stack-md) var(--space-inline-md);
+  width: 100%;
+  min-width: 0;
+}
+
+.stat-group--columns-1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.stat-group--columns-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-group--columns-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-group--columns-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-sm);
+  min-width: 0;
+  padding: var(--space-inset-lg);
+  border: var(--border-width-1) solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.stat-item__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-inline-md);
+  min-width: 0;
+}
+
+.stat-item__label {
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-small-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-body-small-line-height);
+  overflow-wrap: anywhere;
+}
+
+.stat-item__icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-brand);
+}
+
+.stat-item__value {
+  color: var(--color-text-primary);
+  font-size: var(--text-title-large-font-size);
+  font-weight: var(--text-title-large-font-weight);
+  line-height: var(--text-title-large-line-height);
+  overflow-wrap: anywhere;
+}
+
+.stat-item__supporting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-inline-sm);
+  min-width: 0;
+}
+
+.stat-item__description,
+.stat-item__trend {
+  color: var(--color-text-supporting);
+  font-size: var(--text-body-small-font-size);
+  line-height: var(--text-body-small-line-height);
+  overflow-wrap: anywhere;
+}
+
+.stat-item__description {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-item__trend {
+  flex: none;
+}
+
+@media (max-width: 63.9375rem) {
+  .stat-group--columns-3,
+  .stat-group--columns-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 39.9375rem) {
+  .stat-group,
+  .stat-group--columns-2,
+  .stat-group--columns-3,
+  .stat-group--columns-4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@import "../tokens/index.css";
+
+@import "./font.css";
+@import "./reset.css";
+@import "./accessibility.css";
+@import "./foundation-proof.css";
+@import "../components/forms/forms.css";
+
+:root {
+  color: var(--color-text-primary);
+  background: var(--color-surface-page);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text-primary);
+  background: var(--color-surface-page);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+}

@@ -1,0 +1,9 @@
+.stip-error-state {
+  color: var(--result-state-description-color);
+  background: var(--result-state-error-surface);
+  border-color: var(--result-state-error-border);
+}
+
+.stip-error-state .stip-result-state__icon {
+  color: var(--result-state-error-icon);
+}

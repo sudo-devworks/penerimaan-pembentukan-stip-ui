@@ -1,0 +1,94 @@
+.composite-pattern {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-xl);
+  width: 100%;
+  min-width: 0;
+}
+
+.composite-pattern__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-md);
+  min-width: 0;
+}
+
+.composite-pattern__surface {
+  min-width: 0;
+  padding: var(--space-inset-lg);
+  border: var(--border-width-1) solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-default);
+}
+
+.composite-pattern__filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-stack-md) var(--space-inline-md);
+}
+
+.composite-pattern__filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-inline-sm);
+  padding-block-start: var(--space-stack-lg);
+}
+
+.composite-pattern__loading-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-md);
+}
+
+.composite-pattern__loading-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-inline-md);
+  padding: var(--space-inset-md);
+  border: var(--border-width-1) solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.composite-pattern__loading-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-sm);
+  min-width: 0;
+}
+
+.composite-pattern__state-wrapper {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  padding-block: var(--space-stack-xl);
+}
+
+.composite-pattern__content-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-sm);
+}
+
+@media (max-width: 47.9375rem) {
+  .composite-pattern {
+    gap: var(--space-stack-lg);
+  }
+
+  .composite-pattern__surface {
+    padding: var(--space-inset-md);
+  }
+
+  .composite-pattern__filter-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .composite-pattern__filter-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .composite-pattern__filter-actions > * {
+    width: 100%;
+  }
+}

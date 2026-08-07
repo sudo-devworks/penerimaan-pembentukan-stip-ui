@@ -1,0 +1,63 @@
+﻿import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Stories,
+  Title,
+} from "@storybook/addon-docs/blocks";
+
+import * as AlertStories from "./Alert.stories";
+
+<Meta of={AlertStories} />
+
+<Title />
+
+`Alert` menampilkan feedback persisten pada level halaman atau section.
+
+Alert digunakan ketika informasi perlu tetap tersedia sampai user membaca,
+menyelesaikan tindakan, berpindah halaman, atau menutupnya secara eksplisit.
+
+## Penggunaan
+
+Gunakan `Alert` untuk:
+
+- informasi penting pada halaman;
+- kegagalan yang tidak menghilangkan seluruh konten;
+- pemberitahuan proses;
+- peringatan yang membutuhkan tindakan;
+- hasil tindakan yang perlu bertahan lebih lama dari toast.
+
+Jangan gunakan `Alert` untuk:
+
+- validation error per field;
+- ringkasan validation error form;
+- loading state;
+- feedback singkat yang otomatis menghilang;
+- halaman gagal dimuat sepenuhnya.
+
+## Contoh utama
+
+<Primary />
+
+<Controls />
+
+## Severity
+
+Severity yang tersedia:
+
+- `neutral`
+- `info`
+- `success`
+- `warning`
+- `danger`
+
+Severity harus mengikuti makna pesan, bukan sekadar pilihan warna.
+
+## Announcement
+
+Secara default, Alert tidak memakai live region:
+
+```tsx
+<Alert>Informasi pendaftaran tersedia.</Alert>
+```

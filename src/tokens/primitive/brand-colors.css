@@ -1,0 +1,43 @@
+:root {
+  /* STIP Navy */
+  --primitive-color-navy-25: #f5f8fa;
+  --primitive-color-navy-50: #eef4f7;
+  --primitive-color-navy-100: #dce8ef;
+  --primitive-color-navy-200: #bcd2df;
+  --primitive-color-navy-300: #91b4c8;
+  --primitive-color-navy-400: #6090ad;
+  --primitive-color-navy-500: #3e7191;
+  --primitive-color-navy-600: #1d628c;
+  --primitive-color-navy-700: #174d73;
+  --primitive-color-navy-800: #123a5a;
+  --primitive-color-navy-900: #0b2239;
+  --primitive-color-navy-950: #071826;
+
+  /* Maritime Cyan */
+  --primitive-color-cyan-25: #f5feff;
+  --primitive-color-cyan-50: #ecfeff;
+  --primitive-color-cyan-100: #cffafe;
+  --primitive-color-cyan-200: #a5f3fc;
+  --primitive-color-cyan-300: #67e8f9;
+  --primitive-color-cyan-400: #22d3ee;
+  --primitive-color-cyan-500: #06b6d4;
+  --primitive-color-cyan-600: #0891b2;
+  --primitive-color-cyan-700: #0e7490;
+  --primitive-color-cyan-800: #155e75;
+  --primitive-color-cyan-900: #164e63;
+  --primitive-color-cyan-950: #083344;
+
+  /* Maritime Gold */
+  --primitive-color-gold-25: #fffdf5;
+  --primitive-color-gold-50: #fffbeb;
+  --primitive-color-gold-100: #fef3c7;
+  --primitive-color-gold-200: #fde68a;
+  --primitive-color-gold-300: #fcd34d;
+  --primitive-color-gold-400: #fbbf24;
+  --primitive-color-gold-500: #eab308;
+  --primitive-color-gold-600: #ca8a04;
+  --primitive-color-gold-700: #a16207;
+  --primitive-color-gold-800: #854d0e;
+  --primitive-color-gold-900: #713f12;
+  --primitive-color-gold-950: #422006;
+}
