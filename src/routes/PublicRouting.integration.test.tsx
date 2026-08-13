@@ -36,7 +36,7 @@ function renderPublicRoute(pathname: string) {
 
 describe("Public Website routing", () => {
   it.each([
-    ["/", "Persiapkan langkahmu menuju pendidikan dan karier maritim"],
+    ["/", "Pendidikan maritim berkualitas untuk masa depanmu"],
     ["/kegiatan", "Temukan kegiatan penerimaan yang tersedia"],
     ["/program", "Kenali program pendidikan maritim yang tersedia"],
     ["/persyaratan", "Persiapkan data dan dokumen sebelum mendaftar"],

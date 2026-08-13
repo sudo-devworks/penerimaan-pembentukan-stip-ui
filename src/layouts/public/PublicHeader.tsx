@@ -9,7 +9,6 @@ import {
   DrawerBody,
   DrawerClose,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -128,7 +127,7 @@ export function PublicHeader() {
               onOpenChange={(open) => setMobileMenuOpen(open)}
             >
               <DrawerTrigger
-                variant="ghost"
+                variant="outline"
                 leadingIcon={<Menu />}
                 aria-label="Buka menu navigasi"
               >
@@ -142,7 +141,9 @@ export function PublicHeader() {
                 className="public-mobile-navigation"
               >
                 <DrawerHeader className="public-mobile-navigation__header">
-                  <DrawerTitle>Menu utama</DrawerTitle>
+                  <div className="public-mobile-navigation__header-copy">
+                    <DrawerTitle>Menu utama</DrawerTitle>
+                  </div>
 
                   <DrawerClose
                     variant="ghost"
@@ -158,53 +159,62 @@ export function PublicHeader() {
                     aria-label="Navigasi seluler"
                     className="public-mobile-navigation__links"
                   >
-                    {[...publicPrimaryNavigation, ...publicInformationNavigation].map(
-                      (item) => {
-                        const active = isRouteActive(
-                          location.pathname,
-                          item.href,
-                          item.end,
-                        );
+                    {[
+                      ...publicPrimaryNavigation,
+                      ...publicInformationNavigation,
+                    ].map((item) => {
+                      const active = isRouteActive(
+                        location.pathname,
+                        item.href,
+                        item.end,
+                      );
 
-                        return (
-                          <a
-                            key={item.href}
-                            href={item.href}
-                            aria-current={active ? "page" : undefined}
-                            data-active={active || undefined}
-                            onClick={(event) => {
-                              event.preventDefault();
-                              navigateTo(item.href);
-                            }}
-                          >
-                            {item.label}
-                          </a>
-                        );
-                      },
-                    )}
+                      return (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          aria-current={active ? "page" : undefined}
+                          data-active={active || undefined}
+                          onClick={(event) => {
+                            event.preventDefault();
+                            navigateTo(item.href);
+                          }}
+                        >
+                          {item.label}
+                        </a>
+                      );
+                    })}
                   </nav>
+
+                  <div className="public-mobile-navigation__actions">
+                    <div className="public-mobile-navigation__actions-heading">
+                      <span>Portal Peserta</span>
+
+                      <p>
+                        Masuk untuk melanjutkan proses atau buat akun baru.
+                      </p>
+                    </div>
+
+                    <Button
+                      variant="outline"
+                      fullWidth
+                      onClick={() =>
+                        navigateTo(participantPortalRoutes.login)
+                      }
+                    >
+                      Masuk
+                    </Button>
+
+                    <Button
+                      fullWidth
+                      onClick={() =>
+                        navigateTo(participantPortalRoutes.register)
+                      }
+                    >
+                      Daftar Sekarang
+                    </Button>
+                  </div>
                 </DrawerBody>
-
-                <DrawerFooter className="public-mobile-navigation__footer">
-                  <Button
-                    variant="outline"
-                    fullWidth
-                    onClick={() =>
-                      navigateTo(participantPortalRoutes.login)
-                    }
-                  >
-                    Masuk
-                  </Button>
-
-                  <Button
-                    fullWidth
-                    onClick={() =>
-                      navigateTo(participantPortalRoutes.register)
-                    }
-                  >
-                    Daftar Sekarang
-                  </Button>
-                </DrawerFooter>
               </DrawerContent>
             </Drawer>
           </div>
