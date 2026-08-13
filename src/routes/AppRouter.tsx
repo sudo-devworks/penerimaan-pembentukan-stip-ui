@@ -5,27 +5,46 @@ import {
 } from "react-router-dom";
 
 import {
+  InternalAuthLayout,
+  InternalLayout,
+} from "../layouts/internal";
+import {
   ParticipantAuthLayout,
   ParticipantLayout,
 } from "../layouts/participant";
 import { PublicLayout } from "../layouts/public";
 
 import {
+  InternalActivitiesPage,
+  InternalDashboardPage,
+  InternalLoginPage,
+  InternalPartnersPage,
+  InternalParticipantsPage,
+  InternalPaymentsPage,
+  InternalProgramsPage,
+  InternalSelectionPage,
+  InternalVerificationPage,
+  InternalWavesPage,
+  InternalAuditPage,
+  InternalReportsPage,
+} from "../pages/internal";
+
+import {
   ParticipantBiodataPage,
   ParticipantDashboardPage,
   ParticipantDocumentsPage,
+  ParticipantExamCardPage,
+  ParticipantHelpPage,
   ParticipantHistoryPage,
   ParticipantLoginPage,
   ParticipantNotificationsPage,
   ParticipantPaymentPage,
   ParticipantProcessPage,
   ParticipantProfilePage,
+  ParticipantRegisterPage,
   ParticipantSelectionPage,
   ParticipantSelectionResultPage,
-  ParticipantRegisterPage,
-  ParticipantExamCardPage,
   ParticipantSelectionSchedulePage,
-  ParticipantHelpPage,
 } from "../pages/participant";
 
 import {
@@ -59,6 +78,113 @@ function ParticipantPlaceholderPage() {
         berikutnya.
       </p>
     </div>
+  );
+}
+
+function InternalPlaceholderPage() {
+  return (
+    <div
+      style={{
+        padding: "2rem",
+        border: "1px solid var(--color-border-subtle)",
+        borderRadius: "0.75rem",
+        background: "var(--color-surface-default)",
+      }}
+    >
+      <p
+        style={{
+          margin: 0,
+          color: "#a97f28",
+          fontSize: "0.75rem",
+          fontWeight: 700,
+          textTransform: "uppercase",
+        }}
+      >
+        Portal Internal
+      </p>
+
+      <h1>Workspace sedang disiapkan</h1>
+
+      <p>
+        Modul ini akan dibangun pada batch Portal Internal
+        berikutnya.
+      </p>
+    </div>
+  );
+}
+
+function createInternalRouteElement() {
+  return (
+    <Route path="internal">
+      <Route element={<InternalAuthLayout />}>
+        <Route
+          path="masuk"
+          element={<InternalLoginPage />}
+        />
+      </Route>
+
+      <Route element={<InternalLayout />}>
+        <Route
+          index
+          element={<InternalDashboardPage />}
+        />
+
+        <Route
+          path="mitra"
+          element={<InternalPartnersPage />}
+        />
+
+        <Route
+          path="kegiatan"
+          element={<InternalActivitiesPage />}
+        />
+
+        <Route
+          path="gelombang"
+          element={<InternalWavesPage />}
+        />
+
+        <Route
+          path="program"
+          element={<InternalProgramsPage />}
+        />
+
+        <Route
+          path="peserta"
+          element={<InternalParticipantsPage />}
+        />
+
+        <Route
+          path="verifikasi"
+          element={<InternalVerificationPage />}
+        />
+
+        <Route
+          path="pembayaran"
+          element={<InternalPaymentsPage />}
+        />
+
+        <Route
+          path="seleksi"
+          element={<InternalSelectionPage />}
+        />
+
+        <Route
+          path="laporan"
+          element={<InternalReportsPage />}
+        />
+
+        <Route
+          path="audit"
+          element={<InternalAuditPage />}
+        />
+
+        <Route
+          path="*"
+          element={<InternalPlaceholderPage />}
+        />
+      </Route>
+    </Route>
   );
 }
 
@@ -145,7 +271,6 @@ function createParticipantRouteElement() {
           path="daftar"
           element={<ParticipantRegisterPage />}
         />
-
 
         <Route
           path="verifikasi-email"
@@ -270,6 +395,7 @@ export function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
+        {createInternalRouteElement()}
         {createParticipantRouteElement()}
         {createPublicRouteElement()}
       </Routes>
