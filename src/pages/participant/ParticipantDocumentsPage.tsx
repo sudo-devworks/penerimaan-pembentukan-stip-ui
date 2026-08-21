@@ -10,7 +10,6 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import {
-  ActionLink,
   Button,
   FileInput,
   InlineAlert,
@@ -164,9 +163,9 @@ export function ParticipantDocumentsPage() {
 
             <div className="participant-document-card__action">
               {document.status === "accepted" && (
-                <ActionLink href="#">
-                  Lihat Dokumen
-                </ActionLink>
+                <span className="participant-document-card__waiting">
+                  Dokumen tersimpan
+                </span>
               )}
 
               {document.status === "review" && (

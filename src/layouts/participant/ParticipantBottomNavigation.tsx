@@ -1,33 +1,28 @@
 import {
-  Bell,
-  CircleHelp,
   ClipboardList,
   Home,
+  ListChecks,
   UserRound,
+  WalletCards,
 } from "lucide-react";
 import type { MouseEvent, ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import {
-  BottomNavigation,
-  BottomNavigationItem,
-} from "../../components";
+import { BottomNavigation, BottomNavigationItem } from "../../components";
 import {
   isParticipantNavigationItemActive,
   participantPrimaryNavigation,
-} from "../../routes";
+} from "../../routes/participantRoutes";
 
 const participantNavigationIcons: Record<string, ReactNode> = {
   Beranda: <Home />,
   Proses: <ClipboardList />,
-  Notifikasi: <Bell />,
-  Bantuan: <CircleHelp />,
+  Keuangan: <WalletCards />,
+  Seleksi: <ListChecks />,
   Profil: <UserRound />,
 };
 
-function shouldUseClientNavigation(
-  event: MouseEvent<HTMLAnchorElement>,
-) {
+function shouldUseClientNavigation(event: MouseEvent<HTMLAnchorElement>) {
   return (
     event.button === 0 &&
     !event.ctrlKey &&
@@ -42,16 +37,13 @@ export function ParticipantBottomNavigation() {
   const navigate = useNavigate();
 
   return (
-    <BottomNavigation>
+    <BottomNavigation label="Navigasi utama Portal Peserta">
       {participantPrimaryNavigation.map((item) => (
         <BottomNavigationItem
           key={item.href}
           href={item.href}
           icon={participantNavigationIcons[item.label]}
-          active={isParticipantNavigationItemActive(
-            location.pathname,
-            item,
-          )}
+          active={isParticipantNavigationItemActive(location.pathname, item)}
           onClick={(event) => {
             if (!shouldUseClientNavigation(event)) {
               return;

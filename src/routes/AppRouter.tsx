@@ -42,6 +42,8 @@ import {
   ParticipantProcessPage,
   ParticipantProfilePage,
   ParticipantRegisterPage,
+  ParticipantRegistrationPage,
+  ParticipantAdministrationPage,
   ParticipantSelectionPage,
   ParticipantSelectionResultPage,
   ParticipantSelectionSchedulePage,
@@ -300,8 +302,23 @@ function createParticipantRouteElement() {
         />
 
         <Route
-          path="pendaftaran/*"
-          element={<ParticipantPlaceholderPage />}
+          path="pendaftaran"
+          element={<ParticipantRegistrationPage />}
+        />
+
+        <Route
+          path="pendaftaran/kegiatan"
+          element={<ParticipantRegistrationPage />}
+        />
+
+        <Route
+          path="pendaftaran/pilihan"
+          element={<ParticipantRegistrationPage />}
+        />
+
+        <Route
+          path="pendaftaran/konfirmasi"
+          element={<ParticipantRegistrationPage />}
         />
 
         <Route
@@ -321,7 +338,7 @@ function createParticipantRouteElement() {
 
         <Route
           path="administrasi"
-          element={<ParticipantPlaceholderPage />}
+          element={<ParticipantAdministrationPage />}
         />
 
         <Route

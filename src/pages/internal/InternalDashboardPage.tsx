@@ -9,11 +9,14 @@ import {
   RefreshCw,
   UsersRound,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import {
   ActionLink,
   Button,
 } from "../../components";
+
+import { internalRoutes } from "../../routes/internalRoutes";
 
 import "./InternalPages.css";
 
@@ -108,6 +111,8 @@ const agenda = [
 ];
 
 export function InternalDashboardPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="internal-dashboard">
       <header className="internal-page-header">
@@ -170,8 +175,12 @@ export function InternalDashboardPage() {
             </div>
 
             <ActionLink
-              href="#"
+              href={internalRoutes.verification}
               trailingIcon={<ArrowRight />}
+              onClick={(event) => {
+                event.preventDefault();
+                navigate(internalRoutes.verification);
+              }}
             >
               Lihat semua
             </ActionLink>
@@ -230,8 +239,12 @@ export function InternalDashboardPage() {
             </div>
 
             <ActionLink
-              href="#"
+              href={internalRoutes.selection}
               trailingIcon={<ArrowRight />}
+              onClick={(event) => {
+                event.preventDefault();
+                navigate(internalRoutes.selection);
+              }}
             >
               Lihat detail
             </ActionLink>
@@ -279,24 +292,36 @@ export function InternalDashboardPage() {
           </div>
 
           <div className="internal-quick-actions">
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => navigate(internalRoutes.verification)}
+            >
               <ClipboardCheck />
               <span>Verifikasi Dokumen</span>
             </button>
 
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => navigate(internalRoutes.payments)}
+            >
               <Banknote />
               <span>Konfirmasi Pembayaran</span>
             </button>
 
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => navigate(internalRoutes.waves)}
+            >
               <CalendarDays />
               <span>Kelola Gelombang</span>
             </button>
 
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => navigate(internalRoutes.reports)}
+            >
               <FileText />
-              <span>Buat Pengumuman</span>
+              <span>Lihat Laporan</span>
             </button>
           </div>
         </section>
@@ -310,8 +335,12 @@ export function InternalDashboardPage() {
           </div>
 
           <ActionLink
-            href="#"
+            href={internalRoutes.reports}
             trailingIcon={<ArrowRight />}
+            onClick={(event) => {
+              event.preventDefault();
+              navigate(internalRoutes.reports);
+            }}
           >
             Lihat laporan
           </ActionLink>

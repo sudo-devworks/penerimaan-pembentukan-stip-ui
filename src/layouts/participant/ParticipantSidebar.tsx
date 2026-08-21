@@ -2,8 +2,11 @@ import {
   Bell,
   CircleHelp,
   ClipboardList,
+  History,
   Home,
+  ListChecks,
   UserRound,
+  WalletCards,
 } from "lucide-react";
 import type { MouseEvent } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -16,11 +19,9 @@ import {
 import {
   isParticipantNavigationItemActive,
   participantRoutes,
-} from "../../routes";
+} from "../../routes/participantRoutes";
 
-function shouldUseClientNavigation(
-  event: MouseEvent<HTMLAnchorElement>,
-) {
+function shouldUseClientNavigation(event: MouseEvent<HTMLAnchorElement>) {
   return (
     event.button === 0 &&
     !event.ctrlKey &&
@@ -59,14 +60,11 @@ export function ParticipantSidebar() {
           <SideNavigationItem
             href={participantRoutes.home}
             icon={<Home />}
-            active={isParticipantNavigationItemActive(
-              location.pathname,
-              {
-                label: "Beranda",
-                href: participantRoutes.home,
-                match: "exact",
-              },
-            )}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Beranda",
+              href: participantRoutes.home,
+              match: "exact",
+            })}
             onClick={navigateTo(participantRoutes.home)}
           >
             Beranda
@@ -75,17 +73,55 @@ export function ParticipantSidebar() {
           <SideNavigationItem
             href={participantRoutes.process}
             icon={<ClipboardList />}
-            active={isParticipantNavigationItemActive(
-              location.pathname,
-              {
-                label: "Proses",
-                href: participantRoutes.process,
-                match: "process",
-              },
-            )}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Proses",
+              href: participantRoutes.process,
+              match: "process",
+            })}
             onClick={navigateTo(participantRoutes.process)}
           >
             Proses
+          </SideNavigationItem>
+        </SideNavigationGroup>
+
+        <SideNavigationGroup label="Aktivitas">
+          <SideNavigationItem
+            href={participantRoutes.payment}
+            icon={<WalletCards />}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Keuangan",
+              href: participantRoutes.payment,
+              match: "prefix",
+            })}
+            onClick={navigateTo(participantRoutes.payment)}
+          >
+            Keuangan
+          </SideNavigationItem>
+
+          <SideNavigationItem
+            href={participantRoutes.selection}
+            icon={<ListChecks />}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Seleksi",
+              href: participantRoutes.selection,
+              match: "prefix",
+            })}
+            onClick={navigateTo(participantRoutes.selection)}
+          >
+            Seleksi
+          </SideNavigationItem>
+
+          <SideNavigationItem
+            href={participantRoutes.history}
+            icon={<History />}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Riwayat",
+              href: participantRoutes.history,
+              match: "prefix",
+            })}
+            onClick={navigateTo(participantRoutes.history)}
+          >
+            Riwayat
           </SideNavigationItem>
         </SideNavigationGroup>
 
@@ -93,14 +129,11 @@ export function ParticipantSidebar() {
           <SideNavigationItem
             href={participantRoutes.notifications}
             icon={<Bell />}
-            active={isParticipantNavigationItemActive(
-              location.pathname,
-              {
-                label: "Notifikasi",
-                href: participantRoutes.notifications,
-                match: "prefix",
-              },
-            )}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Notifikasi",
+              href: participantRoutes.notifications,
+              match: "prefix",
+            })}
             onClick={navigateTo(participantRoutes.notifications)}
           >
             Notifikasi
@@ -109,14 +142,11 @@ export function ParticipantSidebar() {
           <SideNavigationItem
             href={participantRoutes.help}
             icon={<CircleHelp />}
-            active={isParticipantNavigationItemActive(
-              location.pathname,
-              {
-                label: "Bantuan",
-                href: participantRoutes.help,
-                match: "prefix",
-              },
-            )}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Bantuan",
+              href: participantRoutes.help,
+              match: "prefix",
+            })}
             onClick={navigateTo(participantRoutes.help)}
           >
             Bantuan
@@ -125,14 +155,11 @@ export function ParticipantSidebar() {
           <SideNavigationItem
             href={participantRoutes.profile}
             icon={<UserRound />}
-            active={isParticipantNavigationItemActive(
-              location.pathname,
-              {
-                label: "Profil",
-                href: participantRoutes.profile,
-                match: "prefix",
-              },
-            )}
+            active={isParticipantNavigationItemActive(location.pathname, {
+              label: "Profil",
+              href: participantRoutes.profile,
+              match: "prefix",
+            })}
             onClick={navigateTo(participantRoutes.profile)}
           >
             Profil

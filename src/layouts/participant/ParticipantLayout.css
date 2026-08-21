@@ -626,3 +626,47 @@
         );
     }
 }
+/* =========================================================
+   MOCKUP-08-C1.1 — DESKTOP MARITIME SIDEBAR TEXTURE
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .participant-sidebar {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 47, 83, 0.98) 0%,
+        rgba(7, 56, 95, 0.97) 54%,
+        rgba(5, 42, 74, 0.9) 74%,
+        rgba(4, 31, 56, 0.84) 100%
+      ),
+      url("../../assets/participant/auth/login-background.jpg") bottom center / 150% auto no-repeat;
+  }
+
+  .participant-sidebar::after {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 42%;
+    content: "";
+    pointer-events: none;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 42, 74, 0) 0%,
+        rgba(4, 31, 56, 0.18) 38%,
+        rgba(3, 25, 47, 0.48) 100%
+      );
+  }
+
+  .participant-sidebar__brand,
+  .participant-sidebar .stip-side-navigation {
+    position: relative;
+    z-index: 1;
+  }
+}

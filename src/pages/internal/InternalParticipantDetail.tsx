@@ -6,6 +6,7 @@ import {
   School,
   UserRound,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import {
   ActionLink,
@@ -13,6 +14,7 @@ import {
   DescriptionList,
   DescriptionListItem,
 } from "../../components";
+import { internalRoutes } from "../../routes/internalRoutes";
 
 interface InternalParticipantDetailProps {
   mode?: "participant" | "verification";
@@ -60,6 +62,8 @@ const documents = [
 export function InternalParticipantDetail({
   mode = "participant",
 }: InternalParticipantDetailProps) {
+  const navigate = useNavigate();
+
   return (
     <div className="internal-participant-detail">
       <section className="internal-participant-detail__identity">
@@ -69,14 +73,14 @@ export function InternalParticipantDetail({
 
         <div>
           <div className="internal-participant-detail__name">
-            <h2>Ahmad Fauzi</h2>
+            <h2>Budi Santoso</h2>
 
             <span className="internal-status internal-status--success">
               Akun Aktif
             </span>
           </div>
 
-          <p>CMA240512001</p>
+          <p>STIP24051234</p>
         </div>
       </section>
 
@@ -101,7 +105,7 @@ export function InternalParticipantDetail({
           </DescriptionListItem>
 
           <DescriptionListItem term="Email">
-            ahmad.fauzi@email.com
+            budi.santoso@email.com
           </DescriptionListItem>
 
           <DescriptionListItem term="Nomor HP">
@@ -114,7 +118,13 @@ export function InternalParticipantDetail({
         <div className="internal-participant-detail__section-heading">
           <h3>Dokumen</h3>
 
-          <ActionLink href="#">
+          <ActionLink
+            href={internalRoutes.verification}
+            onClick={(event) => {
+              event.preventDefault();
+              navigate(internalRoutes.verification);
+            }}
+          >
             Lihat Semua
           </ActionLink>
         </div>
@@ -192,7 +202,7 @@ export function InternalParticipantDetail({
         <section className="internal-participant-detail__contacts">
           <div>
             <Mail aria-hidden="true" />
-            <span>ahmad.fauzi@email.com</span>
+            <span>budi.santoso@email.com</span>
           </div>
 
           <div>

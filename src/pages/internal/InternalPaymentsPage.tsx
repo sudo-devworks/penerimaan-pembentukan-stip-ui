@@ -18,8 +18,8 @@ import "./InternalPages.css";
 
 const payments = [
   {
-    registration: "CMA240512001",
-    name: "Ahmad Fauzi",
+    registration: "STIP24051234",
+    name: "Budi Santoso",
     program: "Nautika",
     amount: "Rp500.000",
     method: "Virtual Account",

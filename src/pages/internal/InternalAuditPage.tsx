@@ -22,7 +22,7 @@ const auditLogs = [
     role: "Admin Penerimaan",
     module: "Peserta",
     action: "Lihat Detail",
-    object: "CMA240512001 · Ahmad Fauzi",
+    object: "STIP24051234 · Budi Santoso",
     context: "CMA CGM / Gel. II",
     ip: "10.10.1.24",
   },

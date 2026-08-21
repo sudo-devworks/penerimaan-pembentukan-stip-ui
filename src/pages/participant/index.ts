@@ -13,3 +13,5 @@ export { ParticipantExamCardPage } from "./ParticipantExamCardPage";
 export { ParticipantSelectionSchedulePage } from "./ParticipantSelectionSchedulePage";
 export { ParticipantHelpPage } from "./ParticipantHelpPage";
 export { ParticipantRegisterPage } from "./ParticipantRegisterPage";
+export { ParticipantRegistrationPage } from "./ParticipantRegistrationPage";
+export { ParticipantAdministrationPage } from "./ParticipantAdministrationPage";

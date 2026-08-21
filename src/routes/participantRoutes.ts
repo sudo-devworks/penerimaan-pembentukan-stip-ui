@@ -40,6 +40,11 @@ export const participantRoutes = {
   refund: "/portal/refund",
 } as const;
 
+/**
+ * Mobile navigation intentionally contains only the five most important
+ * destinations. Supporting destinations remain available from the header,
+ * profile, process, and selection hubs.
+ */
 export const participantPrimaryNavigation: ParticipantNavigationItem[] = [
   {
     label: "Beranda",
@@ -52,13 +57,13 @@ export const participantPrimaryNavigation: ParticipantNavigationItem[] = [
     match: "process",
   },
   {
-    label: "Notifikasi",
-    href: participantRoutes.notifications,
+    label: "Keuangan",
+    href: participantRoutes.payment,
     match: "prefix",
   },
   {
-    label: "Bantuan",
-    href: participantRoutes.help,
+    label: "Seleksi",
+    href: participantRoutes.selection,
     match: "prefix",
   },
   {
@@ -68,14 +73,17 @@ export const participantPrimaryNavigation: ParticipantNavigationItem[] = [
   },
 ];
 
+/**
+ * Routes that belong to the active registration/process journey.
+ * Keuangan and Seleksi are deliberately excluded because they have their own
+ * primary navigation destinations.
+ */
 export const participantProcessPrefixes = [
   participantRoutes.process,
   participantRoutes.registration,
-  participantRoutes.payment,
   participantRoutes.biodata,
   participantRoutes.documents,
   participantRoutes.administration,
-  participantRoutes.selection,
   participantRoutes.withdrawal,
   participantRoutes.refund,
 ] as const;
@@ -90,8 +98,7 @@ export function isParticipantNavigationItemActive(
 
   if (item.match === "process") {
     return participantProcessPrefixes.some(
-      (prefix) =>
-        pathname === prefix || pathname.startsWith(`${prefix}/`),
+      (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
     );
   }
 
